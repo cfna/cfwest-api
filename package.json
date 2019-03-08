@@ -1,0 +1,39 @@
+{
+  "name": "@cfwest/api",
+  "description": "API Models & Classes used by CrossFire West",
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "tsc",
+    "clean": "rimraf dist/",
+    "lint": "tslint --project tsconfig.json --config tslint.json --fix",
+    "pretest": "yarn build",
+    "test": "jest",
+    "format": "prettier --write \"**/*.ts\""
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash.merge": "^4.6.1",
+    "puppeteer": "^1.13.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/lodash.merge": "^4.6.6",
+    "@types/node": "^11.9.5",
+    "@types/puppeteer": "^1.12.1",
+    "@types/winston": "^2.4.4",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
+  }
+}
