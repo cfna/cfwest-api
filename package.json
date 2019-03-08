@@ -12,7 +12,8 @@
     "lint": "tslint --project tsconfig.json --config tslint.json --fix",
     "pretest": "yarn build",
     "test": "jest",
-    "format": "prettier --write \"**/*.ts\""
+    "format": "prettier --write \"**/*.ts\"",
+    "release": "release-it --config release.config.json"
   },
   "dependencies": {
     "axios": "^0.18.0",
