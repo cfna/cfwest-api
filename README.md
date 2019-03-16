@@ -28,6 +28,4 @@ npm install --save @cfwest/api
 
 ## License
 
-```
-(c) 2019 - [MIT License](./LICENSE)
-```
+(c) 2019 - PDDStudio & Contributors - [MIT Licensed](./LICENSE)
