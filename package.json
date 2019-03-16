@@ -48,7 +48,9 @@
     "release": "release-it --",
     "release:patch": "release-it --increment=patch",
     "release:minor": "release-it --increment=minor",
-    "release:major": "release-it --increment=major"
+    "release:major": "release-it --increment=major",
+    "prepackage:create": "yarn build",
+    "package:create": "yarn pack --filename --"
   },
   "dependencies": {
     "axios": "^0.18.0",
