@@ -11,7 +11,11 @@
   "homepage": "https://github.com/cfna/cfwest-api",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cfna/cfwest-api.git"
+    "url": "git+https://github.com/cfna/cfwest-api.git"
+  },
+  "directories": {
+    "lib": "./dist",
+    "test": "./tests"
   },
   "main": "dist/index.js",
   "files": [
