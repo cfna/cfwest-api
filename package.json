@@ -1,9 +1,18 @@
 {
   "name": "@cfwest/api",
-  "description": "API Models & Classes used by CrossFire West",
+  "description": "Api Module and Models / Classes for CrossFire West",
   "version": "0.0.2",
   "private": false,
   "license": "MIT",
+  "author": {
+    "name": "Patrick Jung",
+    "email": "patrick.pddstudio@gmail.com"
+  },
+  "homepage": "https://github.com/cfna/cfwest-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfna/cfwest-api.git"
+  },
   "main": "dist/index.js",
   "files": [
     "dist"
