@@ -1,5 +1,7 @@
 # `@cfwest/api` Module for Node.js
 
+[![npm version](https://badge.fury.io/js/%40cfwest%2Fapi.svg)](https://badge.fury.io/js/%40cfwest%2Fapi)
+
 > Module (mainly) used by @cfwest/microservice.
 
 **Important Notice:**
