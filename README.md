@@ -1,10 +1,33 @@
-# `cf-west-server`
+# `cfwest-api`
 
-[![Build Status](https://travis-ci.com/PDDStudio/cfwest-microservice.svg?token=VJS3FtwpqGzx29gNzqm1&branch=develop)](https://travis-ci.com/PDDStudio/cfwest-microservice)
+> Module (mainly) used by @cfwest/microservice.
 
-> A microservice to communicate with CrossFire West.
+**Important Notice:**
 
-## Related Links
+:construction: This Module is still in early development stage and not intended for public usage yet! :construction:
 
-- Official [Repository on DockerHub](https://cloud.docker.com/repository/docker/pddstudio/cfwest-microservice) which always builds the microservice image upon `git push` Events.
-- Mirrored [Repository on GitLab](https://gitlab.com/pddstudio/cfwest-microservice) which builds & publishes branch based docker images via GitLab CI.
+## Features
+
+- Communicate with [CrossFire West's](https://crossfire.z8games.com/) _(internal)_ API.
+- Request & Response Models
+
+## Getting Started
+
+Install the `@cfwest/api` package via `yarn` or `npm`:
+
+```bash
+# add the dependency via yarn
+yarn add @cfwest/api
+# or via npm
+npm install --save @cfwest/api
+```
+
+## Usage
+
+> //TODO: Add usage documentation.
+
+## License
+
+```
+(c) 2019 - [MIT License](./LICENSE)
+```
