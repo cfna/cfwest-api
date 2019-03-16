@@ -22,7 +22,12 @@
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "crossfire", "west", "cfwest", "z8games", "cf", "rest"
+    "crossfire",
+    "west",
+    "cfwest",
+    "z8games",
+    "cf",
+    "rest"
   ],
   "scripts": {
     "prebuild": "yarn clean",
