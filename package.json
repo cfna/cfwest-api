@@ -52,6 +52,7 @@
     "prepackage:create": "yarn build",
     "package:create": "yarn pack --filename $PKG_ARCHIVE_NAME",
     "docs:dev": "docz dev",
+    "predocs:build": "rimraf .docz/dist",
     "docs:build": "docz build"
   },
   "dependencies": {
