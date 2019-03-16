@@ -1,7 +1,7 @@
 {
   "name": "@cfwest/api",
   "description": "Api Module and Models / Classes for CrossFire West",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "license": "MIT",
   "author": {
@@ -30,6 +30,9 @@
     "test": "jest",
     "format": "prettier --write \"**/*.ts\"",
     "prerelease": "yarn build",
+    "prerelease:patch": "yarn build",
+    "prerelease:minor": "yarn build",
+    "prerelease:major": "yarn build",
     "release": "release-it --",
     "release:patch": "release-it --increment=patch",
     "release:minor": "release-it --increment=minor",
