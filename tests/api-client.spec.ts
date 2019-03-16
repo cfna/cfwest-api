@@ -2,17 +2,11 @@ jest.unmock('axios');
 
 import winston from 'winston';
 import ApiClient from '../dist';
+import * as TestUtils from './utils';
 
-jest.setTimeout(10000);
+jest.setTimeout(15000);
 
-const logger = winston.createLogger({
-  exitOnError: false,
-  transports: [ new winston.transports.Console() ],
-  format: winston.format.combine(
-    winston.format.colorize({ all: true }),
-    winston.format.simple(),
-  ),
-});
+const logger = TestUtils.getLogger();
 
 describe('CrossFire ApiClient Module Tests', () => {
 
@@ -39,6 +33,22 @@ describe('CrossFire ApiClient Module Tests', () => {
     expect(result).toBeDefined();
     expect(result.length).toBeGreaterThan(0);
     logger.info(`Ribbon List results returned: ${result.length} items.`);
+
+    const targets = TestUtils.pickFromArray(result, {
+      everyItem: 8,
+    });
+
+    targets.map(item => {
+      TestUtils.inspectObject(item, {
+        onError: (error: Error) => {
+          logger.error(error);
+        },
+        onResult: (res: string) => {
+          logger.info(res);
+        },
+      });
+    });
+
     done();
   });
 
