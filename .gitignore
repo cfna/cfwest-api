@@ -79,4 +79,5 @@ $RECYCLE.BIN/
 
 dist/
 lib/
+cfwest-*.tar.gz
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
