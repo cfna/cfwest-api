@@ -11,7 +11,7 @@
     "tagName": "v%s"
   },
   "github": {
-    "release": false
+    "release": true
   },
   "npm": {
     "publish": true,
