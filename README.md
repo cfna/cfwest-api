@@ -1,4 +1,4 @@
-# `cfwest-api`
+# `@cfwest/api` Module for Node.js
 
 > Module (mainly) used by @cfwest/microservice.
 
