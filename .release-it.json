@@ -5,7 +5,7 @@
   "changelogCommand": "conventional-changelog -p angular | tail -n +3",
   "safeBump": false,
   "scripts": {
-    "afterBump": "yarn package:create cfwest-api-${version}.tar.gz"
+    "afterBump": "PKG_ARCHIVE_NAME=cfwest-api-${version}.tar.gz yarn package:create"
   },
   "src": {
     "tagName": "v%s"
