@@ -25,7 +25,7 @@
     "pretest": "yarn build",
     "test": "jest",
     "format": "prettier --write \"**/*.ts\"",
-    "release": "release-it --config release.config.json"
+    "release": "release-it --"
   },
   "dependencies": {
     "axios": "^0.18.0",
