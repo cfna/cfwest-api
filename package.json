@@ -53,7 +53,9 @@
     "package:create": "yarn pack --filename $PKG_ARCHIVE_NAME",
     "docs:dev": "docz dev",
     "predocs:build": "rimraf .docz/dist",
-    "docs:build": "docz build"
+    "docs:build": "docz build",
+    "predocs:api": "rimraf .docz/dist-api",
+    "docs:api": "typedoc"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -81,6 +83,7 @@
     "ts-node": "^8.0.2",
     "tsconfig-paths": "^3.8.0",
     "tslint": "^5.13.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.3.3333"
   }
 }
