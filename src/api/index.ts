@@ -32,9 +32,17 @@ const logger = winston.createLogger({
   ),
 });
 
+/**
+ * This class is the core component to communicate with [CrossFire West](https://crossfire.z8games.com/) Services.
+ */
 export class ApiClient {
+  /** @ignore */
   readonly _api: AxiosInstance;
+
+  /** @ignore */
   readonly _errorHandler: ErrorHandler;
+
+  /** @ignore */
   readonly _logger: winston.Logger;
 
   public readonly webshop: WebShop;
