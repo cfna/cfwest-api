@@ -1,7 +1,6 @@
 jest.unmock('axios');
 
-import winston from 'winston';
-import ApiClient from '../dist';
+import { default as ApiClient, WeaponCategory } from '../dist';
 import * as TestUtils from './utils';
 
 jest.setTimeout(15000);
@@ -48,6 +47,36 @@ describe('CrossFire ApiClient Module Tests', () => {
         },
       });
     });
+
+    done();
+  });
+
+  test('User weapons query should return result', async (done) => {
+    expect.assertions(2);
+    const api = new ApiClient();
+    const result = await api.userWeapons.getUserWeapons('9060418', WeaponCategory.SNIPER_RIFLES, 'permanent', 1, 10);
+    expect(result).toBeDefined();
+    expect(result.length).toBeGreaterThanOrEqual(10);
+    result.map((weapon, index) => {
+      const number = ++index;
+      logger.info(`#${number} => ${weapon.DISPLAY_NAME}`);
+    });
+    done();
+  });
+
+  test('User collections query should return result', async (done) => {
+    expect.assertions(2);
+    const api = new ApiClient();
+    const result = await api.userWeapons.getUserCollections('9060418');
+    expect(result).toBeDefined();
+    expect(result.length).toEqual(90);
+
+    result.map(collectionInfo => {
+      const collItemsCount = collectionInfo.weapons.length;
+      logger.info(`#${collectionInfo.collection_id} ${collectionInfo.collection_name} (${collItemsCount} Weapons)`);
+    });
+
+    logger.info(`=> Total collections found: ${result.length}`);
 
     done();
   });

@@ -9,6 +9,7 @@ import { LottoEvent } from './lottoevent';
 import { ErrorHandler } from '../error';
 import { Achievements } from './achievements';
 import { Ribbons } from './ribbons';
+import { UserWeapons } from './userweapons';
 
 const apiClient = axios.create({
   baseURL: 'http://crossfire.z8games.com/rest',
@@ -32,9 +33,17 @@ const logger = winston.createLogger({
   ),
 });
 
+/**
+ * This class is the core component to communicate with [CrossFire West](https://crossfire.z8games.com/) Services.
+ */
 export class ApiClient {
+  /** @ignore */
   readonly _api: AxiosInstance;
+
+  /** @ignore */
   readonly _errorHandler: ErrorHandler;
+
+  /** @ignore */
   readonly _logger: winston.Logger;
 
   public readonly webshop: WebShop;
@@ -44,6 +53,7 @@ export class ApiClient {
   public readonly updates: Updates;
   public readonly achievements: Achievements;
   public readonly ribbons: Ribbons;
+  public readonly userWeapons: UserWeapons;
 
   public constructor() {
     this._api = apiClient;
@@ -56,6 +66,7 @@ export class ApiClient {
     this.updates = new Updates(this);
     this.achievements = new Achievements(this);
     this.ribbons = new Ribbons(this);
+    this.userWeapons = new UserWeapons(this);
   }
 
   public async login(id: string, password: string) {
