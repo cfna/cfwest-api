@@ -1,7 +1,7 @@
 {
   "name": "@cfwest/api",
   "description": "Api Module and Models / Classes for CrossFire West",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "private": false,
   "license": "MIT",
   "author": {
