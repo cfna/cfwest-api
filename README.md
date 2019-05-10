@@ -2,6 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/%40cfwest%2Fapi.svg)](https://badge.fury.io/js/%40cfwest%2Fapi)
 
+![npm](https://img.shields.io/npm/dt/@cfwest/api.svg?label=NPM%20Downloads&logo=npm)
+
 > Module (mainly) used by @cfwest/microservice.
 
 **Important Notice:**
