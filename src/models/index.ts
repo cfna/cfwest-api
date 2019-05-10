@@ -4,4 +4,6 @@ export * from './lottoevent';
 export * from './ranking';
 export * from './ribbon';
 export * from './updates';
+export * from './achievement';
+export * from './userweapons';
 export * from './webshop';
