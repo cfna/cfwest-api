@@ -1,0 +1,7 @@
+sudo: false
+language: node_js
+cache: yarn
+before_script:
+  - yarn
+script:
+  - yarn test
