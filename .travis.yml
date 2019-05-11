@@ -1,5 +1,10 @@
 sudo: false
 language: node_js
+node_js:
+  - "11"
+branches:
+  only:
+    - /.*/
 cache: yarn
 before_script:
   - yarn
