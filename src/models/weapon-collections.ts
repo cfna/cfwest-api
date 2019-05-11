@@ -113,7 +113,7 @@ export namespace WeaponCollectionUtils {
   }
 
   export function isValidCollectionId(collectionID: number): boolean {
-    for (const [name, id] of WeaponCollections) {
+    for (const [, id] of WeaponCollections) {
       if (id === collectionID) {
         return true;
       }

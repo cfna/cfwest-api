@@ -70,7 +70,6 @@ export class ApiClient {
   }
 
   public async login(id: string, password: string) {
-    const response = await performLogin(id, password);
-    return response;
+    return await performLogin(id, password);
   }
 }
