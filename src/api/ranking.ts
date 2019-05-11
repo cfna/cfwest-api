@@ -1,4 +1,12 @@
-import { PlayerInfo, PeriodType, RankType, ClanInfo, ClanRankingResponse, PlayerRankingResponse, RankingResponseType } from '../models';
+import {
+  PlayerInfo,
+  PeriodType,
+  RankType,
+  ClanInfo,
+  ClanRankingResponse,
+  PlayerRankingResponse,
+  RankingResponseType,
+} from '../models';
 import { ApiModule } from './base';
 import merge from 'lodash.merge';
 import { ResponseParsingError } from '../error';
@@ -20,7 +28,6 @@ export interface RankingOptions {
 }
 
 export class Ranking extends ApiModule {
-
   private mergeRequestParams(options: RankingOptions): RankingOptions {
     return merge({}, new DefaulutRankingOptions(), options);
   }
@@ -48,23 +55,28 @@ export class Ranking extends ApiModule {
       );
     }
     try {
-      const response = await this.getHttpClient().get<PlayerRankingResponse>('ranking.json', {
-        params: {
-          startrow: options.start,
-          endrow: options.end,
-          period: options.periodType.toString(),
-          rankType: options.rank.toString(),
-          name: options.searchName,
+      const response = await this.getHttpClient().get<PlayerRankingResponse>(
+        'ranking.json',
+        {
+          params: {
+            startrow: options.start,
+            endrow: options.end,
+            period: options.periodType.toString(),
+            rankType: options.rank.toString(),
+            name: options.searchName,
+          },
         },
-      });
+      );
       if (response.data.Ranking.RankList) {
-        response.data.Ranking.RankList.map((item: PlayerInfo) => {
+        response.data.Ranking.RankList.forEach((item: PlayerInfo) => {
           if (item) {
             results.push(item);
           }
         });
       } else {
-        throw new ResponseParsingError('Unable to read response body from request!');
+        throw new ResponseParsingError(
+          'Unable to read response body from request!',
+        );
       }
     } catch (error) {
       this.handleError(error);
@@ -91,23 +103,29 @@ export class Ranking extends ApiModule {
       );
     }
     try {
-      const response = await this.getHttpClient().get<ClanRankingResponse>('ranking.json', {
-        params: {
-          startrow: options.start,
-          endrow: options.end,
-          period: options.periodType.toString(),
-          rankType: options.rank.toString(),
-          name: options.searchName,
+      const response = await this.getHttpClient().get<ClanRankingResponse>(
+        'ranking.json',
+        {
+          params: {
+            startrow: options.start,
+            endrow: options.end,
+            period: options.periodType.toString(),
+            rankType: options.rank.toString(),
+            name: options.searchName,
+          },
         },
-      });
+      );
       if (response.data.Ranking.RankList) {
-        response.data.Ranking.RankList.map((item: ClanInfo) => {
+        // tslint:disable-next-line:no-identical-functions
+        response.data.Ranking.RankList.forEach((item: ClanInfo) => {
           if (item) {
             results.push(item);
           }
         });
       } else {
-        throw new ResponseParsingError('Unable to read response body from request!');
+        throw new ResponseParsingError(
+          'Unable to read response body from request!',
+        );
       }
     } catch (error) {
       this.handleError(error);
@@ -125,7 +143,10 @@ export class Ranking extends ApiModule {
     });
   }
 
-  public async searchClan(name: string, period: PeriodType = PeriodType.AllTime): Promise<ClanInfo[]> {
+  public async searchClan(
+    name: string,
+    period: PeriodType = PeriodType.AllTime,
+  ): Promise<ClanInfo[]> {
     return this.clanRankingRequest({
       searchName: name,
       periodType: period,
@@ -133,12 +154,15 @@ export class Ranking extends ApiModule {
     });
   }
 
-  public async getPlayerRanking(options: RankingOptions = {}): Promise<PlayerInfo[]> {
+  public async getPlayerRanking(
+    options: RankingOptions = {},
+  ): Promise<PlayerInfo[]> {
     return this.playerRankingRequest(options);
   }
 
-  public async getClanRanking(options: RankingOptions = { rank: RankType.Clan }): Promise<ClanInfo[]> {
+  public async getClanRanking(
+    options: RankingOptions = { rank: RankType.Clan },
+  ): Promise<ClanInfo[]> {
     return this.clanRankingRequest(options);
   }
-
 }

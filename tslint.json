@@ -1,7 +1,8 @@
 {
   "defaultSeverity": "error",
   "extends": [
-    "tslint:recommended"
+    "tslint:recommended",
+    "tslint-sonarts"
   ],
   "jsRules": {
     "no-unused-expression": true
@@ -51,7 +52,8 @@
     ],
     "one-variable-per-declaration": [
       false
-    ]
+    ],
+    "no-duplicate-string": false
   },
   "rulesDirectory": []
 }

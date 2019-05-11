@@ -44,7 +44,7 @@ export class UserWeapons extends ApiModule {
           'Unable to read response body from request!',
         );
       }
-      response.data.Weapons.map((weapon: UserWeapon) => {
+      response.data.Weapons.forEach((weapon: UserWeapon) => {
         if (weapon) {
           wpns.push(weapon);
         }
