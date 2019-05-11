@@ -4,6 +4,8 @@
 
 ![npm](https://img.shields.io/npm/dt/@cfwest/api.svg?label=NPM%20Downloads&logo=npm)
 
+![Travis (.com)](https://img.shields.io/travis/com/cfna/cfwest-api.svg?label=Travis%20Build&logo=travis)
+
 > Module (mainly) used by @cfwest/microservice.
 
 **Important Notice:**
