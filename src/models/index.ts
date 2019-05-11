@@ -7,3 +7,4 @@ export * from './updates';
 export * from './achievement';
 export * from './userweapons';
 export * from './webshop';
+export * from './weapon-collections';
