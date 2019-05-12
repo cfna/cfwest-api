@@ -59,11 +59,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3",
     "lodash.merge": "^4.6.1",
     "puppeteer": "^1.13.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.11",
     "@types/jest": "^24.0.9",
     "@types/lodash.merge": "^4.6.6",
     "@types/node": "^11.9.5",
