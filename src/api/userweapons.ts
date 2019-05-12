@@ -8,7 +8,7 @@ import {
   Collections,
   CollectionWithUserInfo,
   UserCollectionsResponse,
-} from '../models/userweapons';
+} from '../models';
 import { ResponseParsingError } from '../error';
 
 export class UserWeapons extends ApiModule {
