@@ -10,6 +10,7 @@ import { ErrorHandler } from '../error';
 import { Achievements } from './achievements';
 import { Ribbons } from './ribbons';
 import { UserWeapons } from './userweapons';
+import { WebPageCrawler } from './webpage-crawler';
 
 const apiClient = axios.create({
   baseURL: 'http://crossfire.z8games.com/rest',
@@ -54,6 +55,7 @@ export class ApiClient {
   public readonly achievements: Achievements;
   public readonly ribbons: Ribbons;
   public readonly userWeapons: UserWeapons;
+  public readonly webPageCrawler: WebPageCrawler;
 
   public constructor() {
     this._api = apiClient;
@@ -67,6 +69,7 @@ export class ApiClient {
     this.achievements = new Achievements(this);
     this.ribbons = new Ribbons(this);
     this.userWeapons = new UserWeapons(this);
+    this.webPageCrawler = new WebPageCrawler(this);
   }
 
   public async login(id: string, password: string) {
