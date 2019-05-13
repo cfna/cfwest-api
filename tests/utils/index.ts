@@ -2,6 +2,7 @@ import util from 'util';
 import winston from 'winston';
 import fs from 'fs';
 import path from 'path';
+import beautify from 'json-beautify';
 
 export const DEFAULT_PLAYER_USN = '9060418'; // Profile of ez.snipes-
 export const MINIMUM_WEAPON_COLLECTION_SIZE = 90; // minimum expected amount of results for queried collections
@@ -104,4 +105,16 @@ export function getIndexForCollectionName(collectionName: string, collections: s
     }
   });
   return target;
+}
+
+export function prettifyObject(obj?: any): string | undefined {
+  try {
+    const prettified = beautify(obj, null, 2, 100);
+    if (prettified) {
+      return prettified;
+    }
+  } catch (error) {
+    // handle error
+  }
+  return undefined;
 }
