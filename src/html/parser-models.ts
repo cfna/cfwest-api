@@ -11,5 +11,27 @@ export interface PlayerProfileInformation {
 }
 
 export interface ClanProfileInformation {
-  // todo
+  clanName?: string;
+  membersCount?: number;
+  creationDate?: Date;
+  description?: string;
+  stats?: ClanProfileInformation.Stats;
+  details?: ClanProfileInformation.Details;
+  websiteUrl?: string;
+  twitterShareUrl?: string;
+}
+
+export namespace ClanProfileInformation {
+  export interface Stats {
+    winRate?: string;
+    wins?: number;
+    draws?: number;
+    losses?: number;
+  }
+
+  export interface Details {
+    map?: string;
+    mode?: string;
+    rivals?: string;
+  }
 }
