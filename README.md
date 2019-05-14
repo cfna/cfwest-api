@@ -4,7 +4,9 @@
 
 ![npm](https://img.shields.io/npm/dt/@cfwest/api.svg?label=NPM%20Downloads&logo=npm)
 
-![Travis (.com)](https://img.shields.io/travis/com/cfna/cfwest-api.svg?label=Travis%20Build&logo=travis)
+[![Travis-CI.com](https://img.shields.io/travis/com/cfna/cfwest-api.svg?label=Travis%20Build&logo=travis)](https://travis-ci.com/cfna/cfwest-api)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cfna_cfwest-api&metric=alert_status)](https://sonarcloud.io/dashboard?id=cfna_cfwest-api)
 
 > Module (mainly) used by @cfwest/microservice.
 
