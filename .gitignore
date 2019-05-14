@@ -81,4 +81,5 @@ dist/
 lib/
 cfwest-*.tar.gz
 .docz/
+.scannerwork/
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
