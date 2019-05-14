@@ -10,3 +10,8 @@ before_script:
   - yarn
 script:
   - yarn test:ci
+  - sonar-scanner
+addons:
+  sonarcloud:
+    projectKey: "cfna_cfwest-api"
+    organization: "cfwest"  
