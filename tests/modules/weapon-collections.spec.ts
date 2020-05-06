@@ -3,7 +3,7 @@ jest.unmock('axios');
 import { default as ApiClient, WeaponCollectionUtils } from '../../dist';
 import * as TestUtils from '../utils';
 
-jest.setTimeout(15000);
+jest.setTimeout(30000);
 
 const logger = TestUtils.getLogger();
 
