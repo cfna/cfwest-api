@@ -2,11 +2,7 @@ import { stringEnum } from '../utils';
 import { CountableResponse } from '.';
 import { BaseResponse } from './base';
 
-export const WeaponsFilterType = stringEnum([
-  'collection',
-  'temporary',
-  'permanent',
-]);
+export const WeaponsFilterType = stringEnum(['collection', 'temporary', 'permanent']);
 
 export type WeaponsFilterType = keyof typeof WeaponsFilterType;
 
@@ -77,10 +73,7 @@ export namespace PagingInfo {
   }
 }
 
-export type CollectionWithUserInfo = [
-  Collections.Info?,
-  Collections.UserInfo[]?
-];
+export type CollectionWithUserInfo = [Collections.Info?, Collections.UserInfo[]?];
 
 export interface UserCollectionsResponse extends CountableResponse {
   Completed_Collections: number;

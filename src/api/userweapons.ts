@@ -26,23 +26,18 @@ export class UserWeapons extends ApiModule {
   ): Promise<UserWeapon[]> {
     const wpns: UserWeapon[] = [];
     try {
-      const response = await this.getHttpClient().get<UserWeaponsResponse>(
-        'userweapons.json',
-        {
-          params: {
-            startrow: start,
-            endrow: end,
-            usn: playerUSN,
-            item_category3: category.toString(),
-            term: filter,
-          },
+      const response = await this.getHttpClient().get<UserWeaponsResponse>('userweapons.json', {
+        params: {
+          startrow: start,
+          endrow: end,
+          usn: playerUSN,
+          item_category3: category.toString(),
+          term: filter,
         },
-      );
+      });
 
       if (!response.data.Weapons) {
-        throw new ResponseParsingError(
-          'Unable to read response body from request!',
-        );
+        throw new ResponseParsingError('Unable to read response body from request!');
       }
       response.data.Weapons.forEach((weapon: UserWeapon) => {
         if (weapon) {
@@ -62,9 +57,7 @@ export class UserWeapons extends ApiModule {
   ): Promise<CollectionWithUserInfo> {
     const responseObject: CollectionWithUserInfo = [];
     try {
-      const response = await this.getHttpClient().get<
-        CollectionCollectorResponse
-      >('userweapons.json', {
+      const response = await this.getHttpClient().get<CollectionCollectorResponse>('userweapons.json', {
         params: {
           startrow: start,
           endrow: end,
@@ -76,9 +69,7 @@ export class UserWeapons extends ApiModule {
       });
 
       if (!response.data) {
-        throw new ResponseParsingError(
-          'Unable to read response body from request!',
-        );
+        throw new ResponseParsingError('Unable to read response body from request!');
       }
 
       responseObject[0] = response.data.Collection_Info;
@@ -89,27 +80,20 @@ export class UserWeapons extends ApiModule {
     return responseObject;
   }
 
-  public async getUserCollections(
-    playerUSN: string,
-  ): Promise<Collections.Info[]> {
+  public async getUserCollections(playerUSN: string): Promise<Collections.Info[]> {
     try {
-      const response = await this.getHttpClient().get<UserCollectionsResponse>(
-        'userweapons.json',
-        {
-          params: {
-            startrow: 1,
-            endrow: 500,
-            item_category3: 1,
-            term: 'collection',
-            usn: playerUSN,
-          },
+      const response = await this.getHttpClient().get<UserCollectionsResponse>('userweapons.json', {
+        params: {
+          startrow: 1,
+          endrow: 500,
+          item_category3: 1,
+          term: 'collection',
+          usn: playerUSN,
         },
-      );
+      });
 
       if (!response.data) {
-        throw new ResponseParsingError(
-          'Unable to read response body from request!',
-        );
+        throw new ResponseParsingError('Unable to read response body from request!');
       }
 
       return response.data.Weapons;

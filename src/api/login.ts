@@ -4,11 +4,7 @@ const idSelector = '#login-page-userid';
 const pwSelector = '#login-page-password';
 const submitButtonSelector = '#login-button';
 
-export async function performLogin(
-  id: string,
-  pw: string,
-  opts?: any,
-): Promise<puppeteer.Cookie[]> {
+export async function performLogin(id: string, pw: string, opts?: any): Promise<puppeteer.Cookie[]> {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://www.z8games.com/login.html', {

@@ -1,7 +1,6 @@
 import { BaseResponse } from '.';
 
 export namespace LottoEvent {
-
   export interface Response extends BaseResponse {
     lastwinner: LottoEvent.WinnerInfo[];
     list: LottoEvent.WinnerInfo[];
@@ -11,5 +10,4 @@ export namespace LottoEvent {
     IGN: string;
     DATETIME: string;
   }
-
 }

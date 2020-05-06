@@ -4,7 +4,6 @@ import { RequestOptionsValidationError, ResponseParsingError } from './errors';
 export type HandleableErrors = RequestOptionsValidationError | ResponseParsingError;
 
 export class ErrorHandler {
-
   private _apiClient: ApiClient;
 
   public constructor(client: ApiClient) {

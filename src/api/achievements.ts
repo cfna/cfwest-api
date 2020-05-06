@@ -1,8 +1,4 @@
-import {
-  Achievement,
-  UserAchievementResponse,
-  UserAchievement,
-} from '../models';
+import { Achievement, UserAchievementResponse, UserAchievement } from '../models';
 import { ApiModule } from './base';
 
 /**
@@ -35,17 +31,12 @@ export class Achievements extends ApiModule {
    *
    * @returns A promise which resolves into an array of all [[UserAchievement]]s
    */
-  public async getUserAchievements(
-    playerUSN: string,
-  ): Promise<UserAchievement[]> {
-    const response = await this.getHttpClient().get<UserAchievementResponse>(
-      'userachievements.json',
-      {
-        params: {
-          usn: playerUSN,
-        },
+  public async getUserAchievements(playerUSN: string): Promise<UserAchievement[]> {
+    const response = await this.getHttpClient().get<UserAchievementResponse>('userachievements.json', {
+      params: {
+        usn: playerUSN,
       },
-    );
+    });
     return response.data.Achievements;
   }
 }
