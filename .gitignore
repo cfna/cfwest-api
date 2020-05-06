@@ -82,3 +82,4 @@ lib/
 cfwest-*.tar.gz
 .docz/
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
+.env
