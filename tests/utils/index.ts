@@ -13,8 +13,8 @@ export function formatTestSuiteTitle(moduleName: string): string {
 }
 
 export interface InspectCallback {
-  onResult?: ((result: string) => void);
-  onError?: ((error: Error) => void);
+  onResult?: (result: string) => void;
+  onError?: (error: Error) => void;
 }
 
 export class PickConfig {
@@ -23,11 +23,8 @@ export class PickConfig {
 
 const logger = winston.createLogger({
   exitOnError: false,
-  transports: [ new winston.transports.Console() ],
-  format: winston.format.combine(
-    winston.format.colorize({ all: true }),
-    winston.format.simple(),
-  ),
+  transports: [new winston.transports.Console()],
+  format: winston.format.combine(winston.format.colorize({ all: true }), winston.format.simple()),
 });
 
 export function getLogger(): winston.Logger {

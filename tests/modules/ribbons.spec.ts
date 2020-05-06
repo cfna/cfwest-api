@@ -8,8 +8,7 @@ jest.setTimeout(90000);
 const logger = TestUtils.getLogger();
 
 describe(TestUtils.formatTestSuiteTitle('Ribbons'), () => {
-
-  test('Ribbon List should not be empty', async (done) => {
+  test('Ribbon List should not be empty', async done => {
     expect.assertions(2);
     const api = new ApiClient();
     const result = await api.ribbons.getRibbonList();
@@ -34,6 +33,4 @@ describe(TestUtils.formatTestSuiteTitle('Ribbons'), () => {
 
     done();
   });
-
-
 });
