@@ -58,8 +58,8 @@
     "docs:api": "typedoc"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "lodash.merge": "^4.6.1",
+    "axios": "^0.19.2",
+    "lodash.merge": "^4.6.2",
     "puppeteer": "^1.13.0",
     "winston": "^3.2.1"
   },
@@ -68,6 +68,7 @@
     "@types/lodash.merge": "^4.6.6",
     "@types/node": "^11.9.5",
     "@types/puppeteer": "^1.12.1",
+    "@types/vfile-message": "^2.0.0",
     "@types/winston": "^2.4.4",
     "conventional-changelog-cli": "^2.0.12",
     "docz": "^0.13.7",
