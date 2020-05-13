@@ -18,6 +18,6 @@
   ],
   "typedocOptions": {
     "mode": "file",
-    "out": ".docz/dist-api"
+    "out": "docs"
   }
 }
