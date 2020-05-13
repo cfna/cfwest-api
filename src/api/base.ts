@@ -11,23 +11,22 @@ export abstract class ApiModule {
   /**
    * @ignore
    */
-  private readonly _api: AxiosInstance;
+  protected readonly httpClient: AxiosInstance;
 
   /**
    * @ignore
    */
-  private readonly _errorHandler: ErrorHandler;
+  protected readonly errorHandler?: ErrorHandler;
 
-  public constructor(apiClient: ApiClient) {
-    this._api = apiClient._api;
-    this._errorHandler = apiClient._errorHandler;
+  public constructor(options: ApiModule.Options) {
+    this.httpClient = options.httpClient;
+    this.errorHandler = options.errorHandler;
   }
+}
 
-  protected getHttpClient(): AxiosInstance {
-    return this._api;
-  }
-
-  protected getErrorHandler(): ErrorHandler {
-    return this._errorHandler;
+export namespace ApiModule {
+  export interface Options {
+    httpClient: AxiosInstance;
+    errorHandler?: ErrorHandler;
   }
 }
