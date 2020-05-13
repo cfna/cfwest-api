@@ -1,6 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
 import winston from 'winston';
-import { performLogin } from './login';
 import { WebShop } from './webshop';
 import { Ranking } from './ranking';
 import { Events } from './events';
@@ -64,9 +63,5 @@ export class ApiClient {
     this.achievements = new Achievements(this);
     this.ribbons = new Ribbons(this);
     this.userWeapons = new UserWeapons(this);
-  }
-
-  public async login(id: string, password: string) {
-    return await performLogin(id, password);
   }
 }
