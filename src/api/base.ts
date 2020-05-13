@@ -1,4 +1,3 @@
-import { ApiClient } from '.';
 import { AxiosInstance } from 'axios';
 import { ErrorHandler } from '../error';
 

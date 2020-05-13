@@ -9,6 +9,7 @@ import { ErrorHandler } from '../error';
 import { Achievements } from './achievements';
 import { Ribbons } from './ribbons';
 import { UserWeapons } from './userweapons';
+import { ApiModule } from './base';
 
 const apiClient = axios.create({
   baseURL: 'http://crossfire.z8games.com/rest',
@@ -33,15 +34,6 @@ const logger = winston.createLogger({
  * This class is the core component to communicate with [CrossFire West](https://crossfire.z8games.com/) Services.
  */
 export class ApiClient {
-  /** @ignore */
-  readonly _api: AxiosInstance;
-
-  /** @ignore */
-  readonly _errorHandler: ErrorHandler;
-
-  /** @ignore */
-  readonly _logger: winston.Logger;
-
   public readonly webshop: WebShop;
   public readonly ranking: Ranking;
   public readonly events: Events;
@@ -52,16 +44,18 @@ export class ApiClient {
   public readonly userWeapons: UserWeapons;
 
   public constructor() {
-    this._api = apiClient;
-    this._logger = logger;
-    this._errorHandler = new ErrorHandler(this);
-    this.webshop = new WebShop(this);
-    this.ranking = new Ranking(this);
-    this.events = new Events(this);
-    this.lottoEvent = new LottoEvent(this);
-    this.updates = new Updates(this);
-    this.achievements = new Achievements(this);
-    this.ribbons = new Ribbons(this);
-    this.userWeapons = new UserWeapons(this);
+    const moduleOptions: ApiModule.Options = {
+      httpClient: apiClient,
+      errorHandler: new ErrorHandler({ logger }),
+    };
+
+    this.webshop = new WebShop(moduleOptions);
+    this.ranking = new Ranking(moduleOptions);
+    this.events = new Events(moduleOptions);
+    this.lottoEvent = new LottoEvent(moduleOptions);
+    this.updates = new Updates(moduleOptions);
+    this.achievements = new Achievements(moduleOptions);
+    this.ribbons = new Ribbons(moduleOptions);
+    this.userWeapons = new UserWeapons(moduleOptions);
   }
 }

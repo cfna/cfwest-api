@@ -7,7 +7,7 @@ export class WebShop extends ApiModule {
     end: number = 100,
     filterType: WebshopFilter = WebshopFilter.None,
   ): Promise<WebShopItem[]> {
-    const response = await this.getHttpClient().get<WebShopResponse>('webshopitems.json', {
+    const response = await this.httpClient.get<WebShopResponse>('webshopitems.json', {
       params: {
         startrow: start,
         endrow: end,

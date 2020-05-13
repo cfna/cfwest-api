@@ -4,7 +4,7 @@ import { ApiModule } from './base';
 
 export class Ribbons extends ApiModule {
   private async fetchUserRibbonInfo(playerUSN: string): Promise<UserRibbonResponse> {
-    const response = await this.getHttpClient().get<UserRibbonResponse>('userribbons.json', {
+    const response = await this.httpClient.get<UserRibbonResponse>('userribbons.json', {
       params: {
         usn: playerUSN,
       },
@@ -16,7 +16,7 @@ export class Ribbons extends ApiModule {
   }
 
   public async getRibbonList(): Promise<Ribbon[]> {
-    const response = await this.getHttpClient().get<Ribbon[]>('ribbonslist.json');
+    const response = await this.httpClient.get<Ribbon[]>('ribbonslist.json');
     return response.data;
   }
 

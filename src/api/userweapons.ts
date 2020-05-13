@@ -13,7 +13,7 @@ import { ResponseParsingError } from '../error';
 
 export class UserWeapons extends ApiModule {
   private handleError(error?: Error) {
-    this.getErrorHandler().handleError(error);
+    this.errorHandler?.handleError(error);
   }
 
   // tslint:disable-next-line:max-line-length
@@ -26,7 +26,7 @@ export class UserWeapons extends ApiModule {
   ): Promise<UserWeapon[]> {
     const wpns: UserWeapon[] = [];
     try {
-      const response = await this.getHttpClient().get<UserWeaponsResponse>('userweapons.json', {
+      const response = await this.httpClient.get<UserWeaponsResponse>('userweapons.json', {
         params: {
           startrow: start,
           endrow: end,
@@ -57,7 +57,7 @@ export class UserWeapons extends ApiModule {
   ): Promise<CollectionWithUserInfo> {
     const responseObject: CollectionWithUserInfo = [];
     try {
-      const response = await this.getHttpClient().get<CollectionCollectorResponse>('userweapons.json', {
+      const response = await this.httpClient.get<CollectionCollectorResponse>('userweapons.json', {
         params: {
           startrow: start,
           endrow: end,
@@ -82,7 +82,7 @@ export class UserWeapons extends ApiModule {
 
   public async getUserCollections(playerUSN: string): Promise<Collections.Info[]> {
     try {
-      const response = await this.getHttpClient().get<UserCollectionsResponse>('userweapons.json', {
+      const response = await this.httpClient.get<UserCollectionsResponse>('userweapons.json', {
         params: {
           startrow: 1,
           endrow: 500,

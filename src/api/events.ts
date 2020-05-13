@@ -2,7 +2,7 @@ import { ApiModule } from './base';
 
 export class Events extends ApiModule {
   public async command<T>(cmd: Events.Command | string): Promise<T | any> {
-    const response = await this.getHttpClient().get('events.json', {
+    const response = await this.httpClient.get('events.json', {
       params: {
         command: cmd,
       },

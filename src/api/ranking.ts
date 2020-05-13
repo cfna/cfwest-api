@@ -33,7 +33,7 @@ export class Ranking extends ApiModule {
   }
 
   private handleError(error?: Error) {
-    this.getErrorHandler().handleError(error);
+    this.errorHandler?.handleError(error);
   }
 
   private async playerRankingRequest(requestOptions: RankingOptions): Promise<PlayerInfo[]> {
@@ -43,7 +43,7 @@ export class Ranking extends ApiModule {
       throw new Error(`Error: Invalid values from merged response returned! Got: ${JSON.stringify(options)}`);
     }
     try {
-      const response = await this.getHttpClient().get<PlayerRankingResponse>('ranking.json', {
+      const response = await this.httpClient.get<PlayerRankingResponse>('ranking.json', {
         params: {
           startrow: options.start,
           endrow: options.end,
@@ -74,7 +74,7 @@ export class Ranking extends ApiModule {
       throw new Error(`Error: Invalid values from merged response returned! Got: ${JSON.stringify(options)}`);
     }
     try {
-      const response = await this.getHttpClient().get<ClanRankingResponse>('ranking.json', {
+      const response = await this.httpClient.get<ClanRankingResponse>('ranking.json', {
         params: {
           startrow: options.start,
           endrow: options.end,

@@ -1,18 +1,25 @@
 import { ApiClient } from '../api';
 import { RequestOptionsValidationError, ResponseParsingError } from './errors';
+import { Logger } from 'winston';
 
 export type HandleableErrors = RequestOptionsValidationError | ResponseParsingError;
 
 export class ErrorHandler {
-  private _apiClient: ApiClient;
+  private readonly logger: Logger;
 
-  public constructor(client: ApiClient) {
-    this._apiClient = client;
+  public constructor(options: ErrorHandler.Options) {
+    this.logger = options.logger;
   }
 
   public handleError(error?: HandleableErrors) {
     if (error) {
-      this._apiClient._logger.error(error);
+      this.logger.error(error);
     }
+  }
+}
+
+export namespace ErrorHandler {
+  export interface Options {
+    logger: Logger;
   }
 }
