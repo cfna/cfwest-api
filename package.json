@@ -52,7 +52,7 @@
     "prepackage:create": "yarn build",
     "package:create": "yarn pack --filename $PKG_ARCHIVE_NAME",
     "predocs:api": "rimraf docs",
-    "docs:api": "typedoc"
+    "docs": "typedoc"
   },
   "dependencies": {
     "axios": "^0.19.2",
