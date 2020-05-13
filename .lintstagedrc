@@ -1,7 +1,10 @@
 {
-  "src/**/*.{ts,js}": [
+  "src/**/*.ts": [
     "yarn lint",
     "prettier --parser typescript --write",
+    "git add"
+  ],
+  "**/*.json": [
     "git add"
   ]
 }

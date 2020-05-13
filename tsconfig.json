@@ -9,11 +9,15 @@
     "allowSyntheticDefaultImports": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "resolveJsonModule": true,
     "baseUrl": "src"
   },
   "include": [
     "src/**/*"
-  ]
+  ],
+  "typedocOptions": {
+    "mode": "file",
+    "out": "docs"
+  }
 }

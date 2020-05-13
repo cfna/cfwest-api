@@ -2,7 +2,6 @@ import { ApiModule } from './base';
 import { LottoEvent as Lotto } from '../models';
 
 export class LottoEvent extends ApiModule {
-
   public async getLottoEventWinners(forDate: string): Promise<Lotto.WinnerInfo[]> {
     const response = await this.getHttpClient().get<Lotto.Response>('lottoevent.json', {
       params: {
@@ -20,5 +19,4 @@ export class LottoEvent extends ApiModule {
     });
     return response.data.lastwinner[0];
   }
-
 }

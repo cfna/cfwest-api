@@ -1,6 +1,8 @@
 .editorconfig
 .nvmrc
 .prettierrc
+.docz
 tsconfig.json
 tslint.json
+cfwest*.tar.gz
 src

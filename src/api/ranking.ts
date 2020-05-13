@@ -1,4 +1,12 @@
-import { PlayerInfo, PeriodType, RankType, ClanInfo, ClanRankingResponse, PlayerRankingResponse, RankingResponseType } from '../models';
+import {
+  PlayerInfo,
+  PeriodType,
+  RankType,
+  ClanInfo,
+  ClanRankingResponse,
+  PlayerRankingResponse,
+  RankingResponseType,
+} from '../models';
 import { ApiModule } from './base';
 import merge from 'lodash.merge';
 import { ResponseParsingError } from '../error';
@@ -20,7 +28,6 @@ export interface RankingOptions {
 }
 
 export class Ranking extends ApiModule {
-
   private mergeRequestParams(options: RankingOptions): RankingOptions {
     return merge({}, new DefaulutRankingOptions(), options);
   }
@@ -29,23 +36,11 @@ export class Ranking extends ApiModule {
     this.getErrorHandler().handleError(error);
   }
 
-  private async playerRankingRequest(
-    requestOptions: RankingOptions,
-  ): Promise<PlayerInfo[]> {
+  private async playerRankingRequest(requestOptions: RankingOptions): Promise<PlayerInfo[]> {
     const options = this.mergeRequestParams(requestOptions);
     const results: PlayerInfo[] = [];
-    if (
-      !options ||
-      !options.start ||
-      !options.end ||
-      !options.periodType ||
-      !options.rank
-    ) {
-      throw new Error(
-        `Error: Invalid values from merged response returned! Got: ${JSON.stringify(
-          options,
-        )}`,
-      );
+    if (!options || !options.start || !options.end || !options.periodType || !options.rank) {
+      throw new Error(`Error: Invalid values from merged response returned! Got: ${JSON.stringify(options)}`);
     }
     try {
       const response = await this.getHttpClient().get<PlayerRankingResponse>('ranking.json', {
@@ -58,7 +53,7 @@ export class Ranking extends ApiModule {
         },
       });
       if (response.data.Ranking.RankList) {
-        response.data.Ranking.RankList.map((item: PlayerInfo) => {
+        response.data.Ranking.RankList.forEach((item: PlayerInfo) => {
           if (item) {
             results.push(item);
           }
@@ -72,23 +67,11 @@ export class Ranking extends ApiModule {
     return results;
   }
 
-  private async clanRankingRequest(
-    requestOptions: RankingOptions,
-  ): Promise<ClanInfo[]> {
+  private async clanRankingRequest(requestOptions: RankingOptions): Promise<ClanInfo[]> {
     const options = this.mergeRequestParams(requestOptions);
     const results: ClanInfo[] = [];
-    if (
-      !options ||
-      !options.start ||
-      !options.end ||
-      !options.periodType ||
-      !options.rank
-    ) {
-      throw new Error(
-        `Error: Invalid values from merged response returned! Got: ${JSON.stringify(
-          options,
-        )}`,
-      );
+    if (!options || !options.start || !options.end || !options.periodType || !options.rank) {
+      throw new Error(`Error: Invalid values from merged response returned! Got: ${JSON.stringify(options)}`);
     }
     try {
       const response = await this.getHttpClient().get<ClanRankingResponse>('ranking.json', {
@@ -101,7 +84,8 @@ export class Ranking extends ApiModule {
         },
       });
       if (response.data.Ranking.RankList) {
-        response.data.Ranking.RankList.map((item: ClanInfo) => {
+        // tslint:disable-next-line:no-identical-functions
+        response.data.Ranking.RankList.forEach((item: ClanInfo) => {
           if (item) {
             results.push(item);
           }
@@ -115,10 +99,7 @@ export class Ranking extends ApiModule {
     return results;
   }
 
-  public async searchPlayer(
-    name: string,
-    period: PeriodType = PeriodType.AllTime,
-  ): Promise<PlayerInfo[]> {
+  public async searchPlayer(name: string, period: PeriodType = PeriodType.AllTime): Promise<PlayerInfo[]> {
     return this.playerRankingRequest({
       searchName: name,
       periodType: period,
@@ -140,5 +121,4 @@ export class Ranking extends ApiModule {
   public async getClanRanking(options: RankingOptions = { rank: RankType.Clan }): Promise<ClanInfo[]> {
     return this.clanRankingRequest(options);
   }
-
 }

@@ -4,11 +4,17 @@
   "beforeChangelogCommand": "conventional-changelog -p angular -i CHANGELOG.md -s",
   "changelogCommand": "conventional-changelog -p angular | tail -n +3",
   "safeBump": false,
+  "scripts": {
+    "afterBump": "PKG_ARCHIVE_NAME=cfwest-api-${version}.tar.gz yarn package:create"
+  },
   "src": {
     "tagName": "v%s"
   },
   "github": {
-    "release": false
+    "release": true,
+    "assets": [
+      "./cfwest-api-${version}.tar.gz"
+    ]
   },
   "npm": {
     "publish": true,
