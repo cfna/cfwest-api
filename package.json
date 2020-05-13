@@ -51,7 +51,7 @@
     "release:major": "dotenv release-it --increment=major",
     "prepackage:create": "yarn build",
     "package:create": "yarn pack --filename $PKG_ARCHIVE_NAME",
-    "predocs:api": "rimraf docs",
+    "predocs": "rimraf docs",
     "docs": "typedoc"
   },
   "dependencies": {
