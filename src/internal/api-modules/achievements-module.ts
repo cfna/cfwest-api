@@ -5,7 +5,7 @@ import { BaseApiModule } from './base-module';
  * ApiModule to handle everything related _'Achievements'_ related implementation.
  * For more details about ApiModules see: [[ApiModule]]
  */
-export class AchievementsModule extends BaseApiModule {
+export class AchievementsApiModule extends BaseApiModule {
   /**
    * Query for a complete list of all available achievements.
    *
