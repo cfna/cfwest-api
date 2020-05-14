@@ -1,5 +1,5 @@
 import { BaseApiModule } from './base-module';
-import { WebShopItem, WebshopFilter, WebShopResponse } from '../api-models';
+import { WebShopItem, WebshopFilter, WebShopResponse } from '../rest-models';
 
 export class WebShopApiModule extends BaseApiModule {
   public async getWebShopItems(

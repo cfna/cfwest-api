@@ -8,7 +8,7 @@ import {
   Collections,
   CollectionWithUserInfo,
   UserCollectionsResponse,
-} from '../api-models';
+} from '../rest-models';
 
 export class UserWeaponsApiModule extends BaseApiModule {
   public async getUserWeapons(

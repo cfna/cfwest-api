@@ -1,5 +1,5 @@
 import { BaseApiModule } from './base-module';
-import { UserRibbonResponse, UserRibbon, RibbonCountInfo, Ribbon } from '../api-models';
+import { UserRibbonResponse, UserRibbon, RibbonCountInfo, Ribbon } from '../rest-models';
 
 export class RibbonsApiModule extends BaseApiModule {
   private fetchUserRibbonInfo(playerUSN: string): Promise<UserRibbonResponse | undefined> {

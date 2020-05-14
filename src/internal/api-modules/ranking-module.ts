@@ -1,5 +1,5 @@
 import { BaseApiModule } from './base-module';
-import { PlayerInfo, PeriodType, RankType, ClanInfo, ClanRankingResponse, PlayerRankingResponse } from '../api-models';
+import { PlayerInfo, PeriodType, RankType, ClanInfo, ClanRankingResponse, PlayerRankingResponse } from '../rest-models';
 import merge from 'lodash.merge';
 
 class DefaulutRankingOptions implements RankingOptions {

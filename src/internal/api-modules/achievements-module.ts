@@ -1,4 +1,4 @@
-import { Achievement, UserAchievementResponse, UserAchievement } from '../api-models';
+import { Achievement, UserAchievementResponse, UserAchievement } from '../rest-models';
 import { BaseApiModule } from './base-module';
 
 /**
