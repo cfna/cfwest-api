@@ -1,7 +1,7 @@
 {
-  "name": "@cfwest/api",
-  "description": "Api Module and Models / Classes for CrossFire West",
-  "version": "0.2.6",
+  "name": "@cfwest/api-client",
+  "description": "Unofficial CrossFire West ApiClient implementation.",
+  "version": "0.0.0",
   "private": false,
   "license": "MIT",
   "author": {
@@ -36,7 +36,7 @@
   "scripts": {
     "prebuild": "yarn clean",
     "build": "tsc",
-    "clean": "rimraf dist/",
+    "clean": "rimraf dist",
     "lint": "tslint --project tsconfig.json --config tslint.json --fix",
     "pretest": "yarn build",
     "test": "jest",
@@ -49,8 +49,6 @@
     "release:patch": "dotenv release-it --increment=patch",
     "release:minor": "dotenv release-it --increment=minor",
     "release:major": "dotenv release-it --increment=major",
-    "prepackage:create": "yarn build",
-    "package:create": "yarn pack --filename $PKG_ARCHIVE_NAME",
     "predocs": "rimraf docs",
     "docs": "typedoc"
   },
@@ -62,7 +60,6 @@
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "@types/lodash.merge": "^4.6.6",
-    "conventional-changelog-cli": "^2.0.34",
     "dotenv-cli": "^3.1.0",
     "husky": "^4.2.5",
     "jest": "^25.5.4",
