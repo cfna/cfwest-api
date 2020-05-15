@@ -3,7 +3,12 @@
 
 name: Build & Run Tests
 
-on: [ push, pull_request]
+on:
+  push:
+  pull_request:
+    branches:
+      - develop
+      - master
 
 jobs:
   build:
