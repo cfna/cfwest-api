@@ -1,7 +1,4 @@
-import { stringEnum } from '../../utils';
 import { BaseResponse, CountableResponse } from './base';
-
-export const WeaponsFilterType = stringEnum(['collection', 'temporary', 'permanent']);
 
 export type WeaponsFilterType = 'collection' | 'temporary' | 'permanent';
 

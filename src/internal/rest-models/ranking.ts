@@ -1,5 +1,4 @@
 import { CountableResponse } from './base';
-import { stringEnum } from '../../utils';
 
 export interface ClanRankingResponse extends CountableResponse {
   Ranking: ClanRanking;
@@ -17,9 +16,7 @@ export interface PlayerRanking {
   RankList: PlayerInfo[];
 }
 
-export const RankingResponseType = stringEnum(['clan', 'player']);
-
-export type RankingResponseType = keyof typeof RankingResponseType;
+export type RankingResponseType = 'clan' | 'player';
 
 export interface PlayerInfo {
   id: number;
@@ -63,10 +60,10 @@ export interface ClanInfo {
 export const enum PeriodType {
   Weekly = 'week',
   Monthly = 'month',
-  AllTime = 'all',
+  AllTime = 'all'
 }
 
 export const enum RankType {
   User = 'user',
-  Clan = 'clan',
+  Clan = 'clan'
 }
