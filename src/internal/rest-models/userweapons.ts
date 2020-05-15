@@ -3,18 +3,9 @@ import { BaseResponse, CountableResponse } from './base';
 
 export const WeaponsFilterType = stringEnum(['collection', 'temporary', 'permanent']);
 
-export type WeaponsFilterType = keyof typeof WeaponsFilterType;
+export type WeaponsFilterType = 'collection' | 'temporary' | 'permanent';
 
-export const enum WeaponCategory {
-  ASSAULT_RIFLES = 1,
-  SNIPER_RIFLES = 2,
-  SUB_MACHINE_GUNS = 3,
-  MACHINE_GUNS = 4,
-  SHOTGUNS = 5,
-  PISTOLS = 6,
-  MELEE = 7,
-  GRENADES = 8,
-}
+export type WeaponCategory = 'assault' | 'sniper' | 'smg' | 'mg' | 'shotgun' | 'pistol' | 'melee' | 'grenade';
 
 export interface UserWeapon {
   item_ID: number;
