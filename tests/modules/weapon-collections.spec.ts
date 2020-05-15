@@ -1,6 +1,6 @@
 jest.unmock('axios');
 
-import { default as ApiClient, WeaponCollectionUtils } from '../../dist';
+import ApiClient, { WeaponCollectionUtils } from '../../dist';
 import * as TestUtils from '../utils';
 
 jest.setTimeout(90000);
@@ -13,10 +13,10 @@ describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
     const api = new ApiClient();
     const result = await api.userWeapons.getUserCollections(TestUtils.DEFAULT_PLAYER_USN);
 
-    logger.debug(`=> Total collections found: ${result.length}`);
+    logger.debug(`=> Total collections found: ${result!.length}`);
 
     expect(result).toBeDefined();
-    expect(result.length).toBeGreaterThanOrEqual(TestUtils.MINIMUM_WEAPON_COLLECTION_SIZE);
+    expect(result!.length).toBeGreaterThanOrEqual(TestUtils.MINIMUM_WEAPON_COLLECTION_SIZE);
 
     done();
   });

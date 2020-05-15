@@ -1,6 +1,6 @@
 jest.unmock('axios');
 
-import { default as ApiClient, WeaponCategory } from '../../dist';
+import ApiClient, { WeaponCategory } from '../../dist';
 import * as TestUtils from '../utils';
 
 jest.setTimeout(90000);
@@ -13,14 +13,14 @@ describe(TestUtils.formatTestSuiteTitle('UserWeapons'), () => {
     const api = new ApiClient();
     const result = await api.userWeapons.getUserWeapons(
       TestUtils.DEFAULT_PLAYER_USN,
-      WeaponCategory.SNIPER_RIFLES,
+      'sniper',
       'permanent',
       1,
       10,
     );
     expect(result).toBeDefined();
-    expect(result.length).toBeGreaterThanOrEqual(10);
-    result.map((weapon, index) => {
+    expect(result!.length).toBeGreaterThanOrEqual(10);
+    result!.map((weapon, index) => {
       const number = ++index;
       logger.debug(`#${number} => ${weapon.DISPLAY_NAME}`);
     });
