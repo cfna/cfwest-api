@@ -2,9 +2,9 @@
 
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/cfna/cfwest-api/Build%20Package%20&%20Run%20Tests/develop)
 
-[![npm version](https://badge.fury.io/js/%40cfwest%2Fapi.svg)](https://badge.fury.io/js/%40cfwest%2Fapi)
+![npm (scoped)](https://img.shields.io/npm/v/@cfwest/api-client)
 
-![npm](https://img.shields.io/npm/dt/@cfwest/api.svg?label=NPM%20Downloads&logo=npm)
+![npm](https://img.shields.io/npm/dt/@cfwest/api-client.svg?label=NPM%20Downloads&logo=npm)
 
 > Unofficial CrossFire West ApiClient implementation for Node.js 
 
