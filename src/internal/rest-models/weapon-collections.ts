@@ -88,11 +88,11 @@ export const WeaponCollections = new Map<string, number>([
   ['Carbonized', 60],
   ['Scorched Beasts', 65],
   ['Prime Beasts', 64],
-  ['Vulcan 9th', 67],
+  ['Vulcan 9th', 67]
 ]);
 
-export namespace WeaponCollectionUtils {
-  export function getCollectionId(collectionName: string): number {
+export class WeaponCollectionUtils {
+  public static getCollectionId(collectionName: string): number {
     const input = collectionName.trim().toLowerCase();
     for (const [name, id] of WeaponCollections) {
       if (name.trim().toLowerCase() === input) {
@@ -103,7 +103,7 @@ export namespace WeaponCollectionUtils {
     return -1;
   }
 
-  export function getCollectionName(collectionID: number): string | undefined {
+  public static getCollectionName(collectionID: number): string | undefined {
     for (const [name, id] of WeaponCollections) {
       if (id === collectionID) {
         return name;
@@ -112,7 +112,7 @@ export namespace WeaponCollectionUtils {
     return undefined;
   }
 
-  export function isValidCollectionId(collectionID: number): boolean {
+  public static isValidCollectionId(collectionID: number): boolean {
     for (const [, id] of WeaponCollections) {
       if (id === collectionID) {
         return true;
