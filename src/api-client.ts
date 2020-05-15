@@ -7,7 +7,7 @@ import {
   WebShopApiModule
 } from './internal/api-modules';
 import { AxiosHttpClient, HttpClient } from './internal/http';
-import { WeaponCategoryMapperImpl } from './internal/utils';
+import { WeaponCategoryMapperImpl } from './internal/mapping';
 import { ApiModuleOptions } from './internal/api-modules/base-module';
 import merge from 'lodash.merge';
 

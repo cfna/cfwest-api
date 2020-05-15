@@ -1,5 +1,5 @@
 import { HttpClient } from '../http';
-import { WeaponCategoryMapper } from '../utils';
+import { WeaponCategoryMapper } from '../mapping';
 
 export abstract class BaseApiModule {
   protected readonly httpClient: HttpClient;

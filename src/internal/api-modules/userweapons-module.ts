@@ -9,7 +9,7 @@ import {
   CollectionWithUserInfo,
   UserCollectionsResponse
 } from '../rest-models';
-import { WeaponCategoryMapper } from '../utils';
+import { WeaponCategoryMapper } from '../mapping';
 
 export class UserWeaponsApiModule extends BaseApiModule {
   private readonly weaponCategoryMapper: WeaponCategoryMapper;
