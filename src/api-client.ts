@@ -11,10 +11,12 @@ import { WeaponCategoryMapperImpl } from './internal/mapping';
 import { ApiModuleOptions } from './internal/api-modules/base-module';
 import merge from 'lodash.merge';
 
+/** @hidden */
 const defaultOptions: ApiClientOptions = {
   httpClient: new AxiosHttpClient()
 };
 
+/** @hidden */
 const defaultApiModuleOptions = {
   weaponCategoryMapper: new WeaponCategoryMapperImpl()
 };
