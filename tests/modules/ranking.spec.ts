@@ -1,6 +1,6 @@
 jest.unmock('axios');
 
-import { default as ApiClient } from '../../dist';
+import ApiClient from '../../dist';
 import * as TestUtils from '../utils';
 
 jest.setTimeout(90000);
@@ -13,8 +13,8 @@ describe(TestUtils.formatTestSuiteTitle('Player/Clan Ranking'), () => {
     const api = new ApiClient();
     const result = await api.ranking.getPlayerRanking();
     expect(result).toBeDefined();
-    expect(result.length).toEqual(100);
-    logger.debug(`Ranking Query results returned: ${result.length} items.`);
+    expect(result!.length).toEqual(100);
+    logger.debug(`Ranking Query results returned: ${result!.length} items.`);
     done();
   });
 });

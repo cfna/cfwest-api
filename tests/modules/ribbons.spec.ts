@@ -1,6 +1,6 @@
 jest.unmock('axios');
 
-import { default as ApiClient } from '../../dist';
+import ApiClient from '../../dist'
 import * as TestUtils from '../utils';
 
 jest.setTimeout(90000);
@@ -13,10 +13,10 @@ describe(TestUtils.formatTestSuiteTitle('Ribbons'), () => {
     const api = new ApiClient();
     const result = await api.ribbons.getRibbonList();
     expect(result).toBeDefined();
-    expect(result.length).toBeGreaterThan(0);
-    logger.debug(`Ribbon List results returned: ${result.length} items.`);
+    expect(result!.length).toBeGreaterThan(0);
+    logger.debug(`Ribbon List results returned: ${result!.length} items.`);
 
-    const targets = TestUtils.pickFromArray(result, {
+    const targets = TestUtils.pickFromArray(result!, {
       everyItem: 8,
     });
 
