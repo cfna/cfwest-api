@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ErrorHandler | @cfwest/api</title>
-	<meta name="description" content="Documentation for @cfwest/api">
+	<title>AxiosHttpClient | @cfwest/api-client</title>
+	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@cfwest/api</a>
+					<a href="../index.html" class="title">@cfwest/api-client</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="errorhandler.html">ErrorHandler</a>
+					<a href="axioshttpclient.html">AxiosHttpClient</a>
 				</li>
 			</ul>
-			<h1>Class ErrorHandler</h1>
+			<h1>Class AxiosHttpClient</h1>
 		</div>
 	</div>
 </header>
@@ -70,8 +70,14 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ErrorHandler</span>
+						<span class="target">AxiosHttpClient</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/httpclient.html" class="tsd-signature-type">HttpClient</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -81,19 +87,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="errorhandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="axioshttpclient.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="errorhandler.html#_apiclient" class="tsd-kind-icon">_api<wbr>Client</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="axioshttpclient.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="errorhandler.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="axioshttpclient.html#get" class="tsd-kind-icon">get</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,22 +111,16 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Error<wbr>Handler<span class="tsd-signature-symbol">(</span>client<span class="tsd-signature-symbol">: </span><a href="apiclient.html" class="tsd-signature-type">ApiClient</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="errorhandler.html" class="tsd-signature-type">ErrorHandler</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Axios<wbr>Http<wbr>Client<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="axioshttpclient.html" class="tsd-signature-type">AxiosHttpClient</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/7542a1d/src/error/error-handler.ts#L7">src/error/error-handler.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/http/axios-http-client.ts#L5">internal/http/axios-http-client.ts:5</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>client: <a href="apiclient.html" class="tsd-signature-type">ApiClient</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="errorhandler.html" class="tsd-signature-type">ErrorHandler</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="axioshttpclient.html" class="tsd-signature-type">AxiosHttpClient</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -128,38 +128,48 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_apiclient" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _api<wbr>Client</h3>
-					<div class="tsd-signature tsd-kind-icon">_api<wbr>Client<span class="tsd-signature-symbol">:</span> <a href="apiclient.html" class="tsd-signature-type">ApiClient</a></div>
+					<a name="httpclient" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> http<wbr>Client</h3>
+					<div class="tsd-signature tsd-kind-icon">http<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AxiosInstance</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/7542a1d/src/error/error-handler.ts#L7">src/error/error-handler.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/http/axios-http-client.ts#L5">internal/http/axios-http-client.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="handleerror" class="tsd-anchor"></a>
-					<h3>handle<wbr>Error</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Error<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">?: </span><a href="../globals.html#handleableerrors" class="tsd-signature-type">HandleableErrors</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="get" class="tsd-anchor"></a>
+					<h3>get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get&lt;T&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/httpclient.html">HttpClient</a>.<a href="../interfaces/httpclient.html#get">get</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/7542a1d/src/error/error-handler.ts#L13">src/error/error-handler.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/http/axios-http-client.ts#L22">internal/http/axios-http-client.ts:22</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <a href="../globals.html#handleableerrors" class="tsd-signature-type">HandleableErrors</a></h5>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -178,16 +188,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="errorhandler.html" class="tsd-kind-icon">Error<wbr>Handler</a>
+						<a href="axioshttpclient.html" class="tsd-kind-icon">Axios<wbr>Http<wbr>Client</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="errorhandler.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="axioshttpclient.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="errorhandler.html#_apiclient" class="tsd-kind-icon">_api<wbr>Client</a>
+								<a href="axioshttpclient.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="errorhandler.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="axioshttpclient.html#get" class="tsd-kind-icon">get</a>
 							</li>
 						</ul>
 					</li>
@@ -208,21 +218,18 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
 			</ul>
 		</div>
 	</div>

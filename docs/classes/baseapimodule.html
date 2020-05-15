@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Data | @cfwest/api-client</title>
+	<title>BaseApiModule | @cfwest/api-client</title>
 	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/paginginfo.html">PagingInfo</a>
-				</li>
-				<li>
-					<a href="paginginfo.data.html">Data</a>
+					<a href="baseapimodule.html">BaseApiModule</a>
 				</li>
 			</ul>
-			<h1>Interface Data</h1>
+			<h1>Class BaseApiModule</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +70,27 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Data</span>
+						<span class="target">BaseApiModule</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="achievementsapimodule.html" class="tsd-signature-type">AchievementsApiModule</a>
+							</li>
+							<li>
+								<a href="rankingapimodule.html" class="tsd-signature-type">RankingApiModule</a>
+							</li>
+							<li>
+								<a href="ribbonsapimodule.html" class="tsd-signature-type">RibbonsApiModule</a>
+							</li>
+							<li>
+								<a href="updatesapimodule.html" class="tsd-signature-type">UpdatesApiModule</a>
+							</li>
+							<li>
+								<a href="userweaponsapimodule.html" class="tsd-signature-type">UserWeaponsApiModule</a>
+							</li>
+							<li>
+								<a href="webshopapimodule.html" class="tsd-signature-type">WebShopApiModule</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -82,56 +99,55 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="baseapimodule.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#lastpage" class="tsd-kind-icon">last<wbr>Page</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#pagenumber" class="tsd-kind-icon">page<wbr>Number</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#perpage" class="tsd-kind-icon">per<wbr>Page</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#totalcnt" class="tsd-kind-icon">total<wbr>Cnt</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="baseapimodule.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Api<wbr>Module<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/apimoduleoptions.html" class="tsd-signature-type">ApiModuleOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="baseapimodule.html" class="tsd-signature-type">BaseApiModule</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/api-modules/base-module.ts#L5">internal/api-modules/base-module.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/apimoduleoptions.html" class="tsd-signature-type">ApiModuleOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="baseapimodule.html" class="tsd-signature-type">BaseApiModule</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="lastpage" class="tsd-anchor"></a>
-					<h3>last<wbr>Page</h3>
-					<div class="tsd-signature tsd-kind-icon">last<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="httpclient" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> http<wbr>Client</h3>
+					<div class="tsd-signature tsd-kind-icon">http<wbr>Client<span class="tsd-signature-symbol">:</span> <a href="../interfaces/httpclient.html" class="tsd-signature-type">HttpClient</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L56">internal/rest-models/userweapons.ts:56</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="pagenumber" class="tsd-anchor"></a>
-					<h3>page<wbr>Number</h3>
-					<div class="tsd-signature tsd-kind-icon">page<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L58">internal/rest-models/userweapons.ts:58</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="perpage" class="tsd-anchor"></a>
-					<h3>per<wbr>Page</h3>
-					<div class="tsd-signature tsd-kind-icon">per<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L57">internal/rest-models/userweapons.ts:57</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="totalcnt" class="tsd-anchor"></a>
-					<h3>total<wbr>Cnt</h3>
-					<div class="tsd-signature tsd-kind-icon">total<wbr>Cnt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L59">internal/rest-models/userweapons.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/api-modules/base-module.ts#L5">internal/api-modules/base-module.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -143,52 +159,25 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/achievement.html">Achievement</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/collections.html">Collections</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/lottoevent.html">Lotto<wbr>Event</a>
-					</li>
-					<li class="current tsd-kind-namespace">
-						<a href="../modules/paginginfo.html">Paging<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/ribbon.html">Ribbon</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/weaponcollectionutils.html">Weapon<wbr>Collection<wbr>Utils</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
-						<a href="paginginfo.data.html" class="tsd-kind-icon">Data</a>
+					<li class="current tsd-kind-class">
+						<a href="baseapimodule.html" class="tsd-kind-icon">Base<wbr>Api<wbr>Module</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#lastpage" class="tsd-kind-icon">last<wbr>Page</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="baseapimodule.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#pagenumber" class="tsd-kind-icon">page<wbr>Number</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#perpage" class="tsd-kind-icon">per<wbr>Page</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#totalcnt" class="tsd-kind-icon">total<wbr>Cnt</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="baseapimodule.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-property tsd-parent-kind-namespace">
-						<a href="../modules/paginginfo.html#paginginfo-1" class="tsd-kind-icon">paging<wbr>Info</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

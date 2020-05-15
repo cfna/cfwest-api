@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Data | @cfwest/api-client</title>
+	<title>WeaponCategoryMapper | @cfwest/api-client</title>
 	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/paginginfo.html">PagingInfo</a>
-				</li>
-				<li>
-					<a href="paginginfo.data.html">Data</a>
+					<a href="weaponcategorymapper.html">WeaponCategoryMapper</a>
 				</li>
 			</ul>
-			<h1>Interface Data</h1>
+			<h1>Interface WeaponCategoryMapper</h1>
 		</div>
 	</div>
 </header>
@@ -73,8 +70,14 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Data</span>
+						<span class="target">WeaponCategoryMapper</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/weaponcategorymapperimpl.html" class="tsd-signature-type">WeaponCategoryMapperImpl</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -82,58 +85,62 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#lastpage" class="tsd-kind-icon">last<wbr>Page</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#pagenumber" class="tsd-kind-icon">page<wbr>Number</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#perpage" class="tsd-kind-icon">per<wbr>Page</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="paginginfo.data.html#totalcnt" class="tsd-kind-icon">total<wbr>Cnt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="weaponcategorymapper.html#mapweaponcategoryindextoname" class="tsd-kind-icon">map<wbr>Weapon<wbr>Category<wbr>Index<wbr>ToName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="weaponcategorymapper.html#mapweaponcategorynametoindex" class="tsd-kind-icon">map<wbr>Weapon<wbr>Category<wbr>Name<wbr>ToIndex</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="lastpage" class="tsd-anchor"></a>
-					<h3>last<wbr>Page</h3>
-					<div class="tsd-signature tsd-kind-icon">last<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L56">internal/rest-models/userweapons.ts:56</a></li>
-						</ul>
-					</aside>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="mapweaponcategoryindextoname" class="tsd-anchor"></a>
+					<h3>map<wbr>Weapon<wbr>Category<wbr>Index<wbr>ToName</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">map<wbr>Weapon<wbr>Category<wbr>Index<wbr>ToName<span class="tsd-signature-symbol">(</span>categoryIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#weaponcategory" class="tsd-signature-type">WeaponCategory</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/mapping/weapon-category-mapping.ts#L5">internal/mapping/weapon-category-mapping.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>categoryIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#weaponcategory" class="tsd-signature-type">WeaponCategory</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="pagenumber" class="tsd-anchor"></a>
-					<h3>page<wbr>Number</h3>
-					<div class="tsd-signature tsd-kind-icon">page<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L58">internal/rest-models/userweapons.ts:58</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="perpage" class="tsd-anchor"></a>
-					<h3>per<wbr>Page</h3>
-					<div class="tsd-signature tsd-kind-icon">per<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L57">internal/rest-models/userweapons.ts:57</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="totalcnt" class="tsd-anchor"></a>
-					<h3>total<wbr>Cnt</h3>
-					<div class="tsd-signature tsd-kind-icon">total<wbr>Cnt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/rest-models/userweapons.ts#L59">internal/rest-models/userweapons.ts:59</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="mapweaponcategorynametoindex" class="tsd-anchor"></a>
+					<h3>map<wbr>Weapon<wbr>Category<wbr>Name<wbr>ToIndex</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">map<wbr>Weapon<wbr>Category<wbr>Name<wbr>ToIndex<span class="tsd-signature-symbol">(</span>category<span class="tsd-signature-symbol">: </span><a href="../globals.html#weaponcategory" class="tsd-signature-type">WeaponCategory</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/780f5ed/src/internal/mapping/weapon-category-mapping.ts#L4">internal/mapping/weapon-category-mapping.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>category: <a href="../globals.html#weaponcategory" class="tsd-signature-type">WeaponCategory</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -143,52 +150,25 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/achievement.html">Achievement</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/collections.html">Collections</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/lottoevent.html">Lotto<wbr>Event</a>
-					</li>
-					<li class="current tsd-kind-namespace">
-						<a href="../modules/paginginfo.html">Paging<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/ribbon.html">Ribbon</a>
-					</li>
-					<li class=" tsd-kind-namespace">
-						<a href="../modules/weaponcollectionutils.html">Weapon<wbr>Collection<wbr>Utils</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
-						<a href="paginginfo.data.html" class="tsd-kind-icon">Data</a>
+					<li class="current tsd-kind-interface">
+						<a href="weaponcategorymapper.html" class="tsd-kind-icon">Weapon<wbr>Category<wbr>Mapper</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#lastpage" class="tsd-kind-icon">last<wbr>Page</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="weaponcategorymapper.html#mapweaponcategoryindextoname" class="tsd-kind-icon">map<wbr>Weapon<wbr>Category<wbr>Index<wbr>ToName</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#pagenumber" class="tsd-kind-icon">page<wbr>Number</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#perpage" class="tsd-kind-icon">per<wbr>Page</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="paginginfo.data.html#totalcnt" class="tsd-kind-icon">total<wbr>Cnt</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="weaponcategorymapper.html#mapweaponcategorynametoindex" class="tsd-kind-icon">map<wbr>Weapon<wbr>Category<wbr>Name<wbr>ToIndex</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-property tsd-parent-kind-namespace">
-						<a href="../modules/paginginfo.html#paginginfo-1" class="tsd-kind-icon">paging<wbr>Info</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
