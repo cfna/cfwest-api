@@ -4,13 +4,19 @@ import {
   RibbonsApiModule,
   UpdatesApiModule,
   UserWeaponsApiModule,
-  WebShopApiModule,
+  WebShopApiModule
 } from './internal/api-modules';
 import { AxiosHttpClient, HttpClient } from './internal/http';
+import { WeaponCategoryMapperImpl } from './internal/utils';
+import { ApiModuleOptions } from './internal/api-modules/base-module';
 import merge from 'lodash.merge';
 
 const defaultOptions: ApiClientOptions = {
-  httpClient: new AxiosHttpClient(),
+  httpClient: new AxiosHttpClient()
+};
+
+const defaultApiModuleOptions = {
+  weaponCategoryMapper: new WeaponCategoryMapperImpl()
 };
 
 export class ApiClient {
@@ -23,16 +29,21 @@ export class ApiClient {
 
   constructor(options?: ApiClientOptions) {
     const initOptions = this.mergeConstructorOptions(options);
-    this.achievements = new AchievementsApiModule({ httpClient: initOptions.httpClient });
-    this.ranking = new RankingApiModule({ httpClient: initOptions.httpClient });
-    this.ribbons = new RibbonsApiModule({ httpClient: initOptions.httpClient });
-    this.updates = new UpdatesApiModule({ httpClient: initOptions.httpClient });
-    this.userWeapons = new UserWeaponsApiModule({ httpClient: initOptions.httpClient });
-    this.webshop = new WebShopApiModule({ httpClient: initOptions.httpClient });
+    const moduleInitOptions = this.createApiModuleOptions(initOptions);
+    this.achievements = new AchievementsApiModule(moduleInitOptions);
+    this.ranking = new RankingApiModule(moduleInitOptions);
+    this.ribbons = new RibbonsApiModule(moduleInitOptions);
+    this.updates = new UpdatesApiModule(moduleInitOptions);
+    this.userWeapons = new UserWeaponsApiModule(moduleInitOptions);
+    this.webshop = new WebShopApiModule(moduleInitOptions);
   }
 
   private mergeConstructorOptions(options?: ApiClientOptions): ApiClientOptions {
     return merge({}, defaultOptions, options);
+  }
+
+  private createApiModuleOptions(apiClientOptions: ApiClientOptions): ApiModuleOptions {
+    return merge({}, defaultApiModuleOptions, apiClientOptions);
   }
 }
 
