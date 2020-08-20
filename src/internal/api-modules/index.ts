@@ -4,3 +4,4 @@ export * from './ribbons-module';
 export * from './updates-module';
 export * from './userweapons-module';
 export * from './webshop-module';
+export * from './userprofile-module';

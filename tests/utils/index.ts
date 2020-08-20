@@ -3,7 +3,7 @@ import winston from 'winston';
 import fs from 'fs';
 import path from 'path';
 
-export const DEFAULT_PLAYER_USN = '9060418'; // Profile of ez.snipes-
+export const DEFAULT_PLAYER_USN = '1'; // Profile of #Grumpy (Highest Admin)
 export const MINIMUM_WEAPON_COLLECTION_SIZE = 90; // minimum expected amount of results for queried collections
 
 export const API_MODULE_TEST_SUITE_TITLE = 'ApiModule Tests for ';
