@@ -1,6 +1,5 @@
 {
   "src/**/*.ts": [
-    "yarn lint",
     "yarn format"
   ]
 }
