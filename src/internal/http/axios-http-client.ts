@@ -1,9 +1,9 @@
-import axios, { AxiosInstance } from 'axios';
-import { Agent } from 'https';
-import { HttpClient } from './http-client';
+import axios, { AxiosInstance } from 'axios'
+import { Agent } from 'https'
+import { HttpClient } from './http-client'
 
 export class AxiosHttpClient implements HttpClient {
-  private readonly httpClient: AxiosInstance;
+  private readonly httpClient: AxiosInstance
 
   constructor() {
     this.httpClient = axios.create({
@@ -20,14 +20,14 @@ export class AxiosHttpClient implements HttpClient {
       httpsAgent: new Agent({
         rejectUnauthorized: false
       })
-    });
+    })
   }
 
   async get<T>(url: string, options?: any): Promise<T | undefined> {
-    const response = await this.httpClient.get<T>(url, options);
+    const response = await this.httpClient.get<T>(url, options)
     if (response && response.data) {
-      return response.data;
+      return response.data
     }
-    return undefined;
+    return undefined
   }
 }

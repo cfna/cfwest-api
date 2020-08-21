@@ -1,5 +1,5 @@
-import { BaseApiModule } from './base-module';
-import { UpdateInfo, UpdatesResponse } from '../rest-models';
+import { BaseApiModule } from './base-module'
+import { UpdateInfo, UpdatesResponse } from '../rest-models'
 
 export class UpdatesApiModule extends BaseApiModule {
   public async getUpdateInfo(start: number = 1, end: number = 10): Promise<UpdateInfo[] | undefined> {
@@ -8,11 +8,11 @@ export class UpdatesApiModule extends BaseApiModule {
         startrow: start,
         endrow: end
       }
-    });
+    })
 
     if (response && response.WebPages) {
-      return response.WebPages;
+      return response.WebPages
     }
-    return undefined;
+    return undefined
   }
 }

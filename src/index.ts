@@ -1,4 +1,4 @@
-export * from './internal/rest-models';
-import { ApiClient } from './api-client';
+export * from './internal/rest-models'
+import { ApiClient } from './api-client'
 
-export default ApiClient;
+export default ApiClient

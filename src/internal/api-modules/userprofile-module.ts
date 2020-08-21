@@ -1,5 +1,5 @@
-import { BaseApiModule } from './base-module';
-import { UserProfileResponse } from 'internal/rest-models/userprofile';
+import { BaseApiModule } from './base-module'
+import { UserProfileResponse } from 'internal/rest-models/userprofile'
 
 export class UserProfileApiModule extends BaseApiModule {
   public async getUserProfile(playerUsn: string): Promise<UserProfileResponse | undefined> {
@@ -7,8 +7,8 @@ export class UserProfileApiModule extends BaseApiModule {
       params: {
         usn: playerUsn
       }
-    });
+    })
 
-    return response;
+    return response
   }
 }

@@ -89,35 +89,35 @@ export const WeaponCollections = new Map<string, number>([
   ['Scorched Beasts', 65],
   ['Prime Beasts', 64],
   ['Vulcan 9th', 67]
-]);
+])
 
 export class WeaponCollectionUtils {
   public static getCollectionId(collectionName: string): number {
-    const input = collectionName.trim().toLowerCase();
+    const input = collectionName.trim().toLowerCase()
     for (const [name, id] of WeaponCollections) {
       if (name.trim().toLowerCase() === input) {
-        return id;
+        return id
       }
     }
     // -1 indicates an invalid result - most likely because the input name doesn't match a collection's one.
-    return -1;
+    return -1
   }
 
   public static getCollectionName(collectionID: number): string | undefined {
     for (const [name, id] of WeaponCollections) {
       if (id === collectionID) {
-        return name;
+        return name
       }
     }
-    return undefined;
+    return undefined
   }
 
   public static isValidCollectionId(collectionID: number): boolean {
     for (const [, id] of WeaponCollections) {
       if (id === collectionID) {
-        return true;
+        return true
       }
     }
-    return false;
+    return false
   }
 }

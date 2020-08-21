@@ -1,5 +1,5 @@
-import { Achievement, UserAchievementResponse, UserAchievement } from '../rest-models';
-import { BaseApiModule } from './base-module';
+import { Achievement, UserAchievementResponse, UserAchievement } from '../rest-models'
+import { BaseApiModule } from './base-module'
 
 /**
  * ApiModule to handle everything related _'Achievements'_ related implementation.
@@ -17,7 +17,7 @@ export class AchievementsApiModule extends BaseApiModule {
       {
         baseURL: undefined
       }
-    );
+    )
   }
 
   /**
@@ -35,7 +35,7 @@ export class AchievementsApiModule extends BaseApiModule {
       params: {
         usn: playerUSN
       }
-    });
-    return response?.Achievements;
+    })
+    return response?.Achievements
   }
 }

@@ -1,9 +1,9 @@
 export interface BaseResponse {
-  APIresult: string;
-  APImessage: string;
+  APIresult: string
+  APImessage: string
 }
 
 export interface CountableResponse extends BaseResponse {
-  Total_Count: number;
-  Count: number;
+  Total_Count: number
+  Count: number
 }

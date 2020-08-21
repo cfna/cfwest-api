@@ -1,5 +1,5 @@
-import { BaseApiModule } from './base-module';
-import { WebShopItem, WebshopFilter, WebShopResponse } from '../rest-models';
+import { BaseApiModule } from './base-module'
+import { WebShopItem, WebshopFilter, WebShopResponse } from '../rest-models'
 
 export class WebShopApiModule extends BaseApiModule {
   public async getWebShopItems(
@@ -13,9 +13,9 @@ export class WebShopApiModule extends BaseApiModule {
         endrow: end,
         filter: filterType
       }
-    });
+    })
     if (response && response.WebshopItems && response.WebshopItems.WebShopItems) {
-      return response.WebshopItems.WebShopItems;
+      return response.WebshopItems.WebShopItems
     }
   }
 }
