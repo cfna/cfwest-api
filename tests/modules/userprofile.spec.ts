@@ -1,6 +1,6 @@
 jest.unmock('axios')
 
-import ApiClient, { UserProfileResponse } from '../../src'
+import ApiClient, { UserProfileResponse, UserProfileHeaderResponse } from '../../src'
 import * as TestUtils from '../utils'
 
 jest.setTimeout(90000)
@@ -14,6 +14,19 @@ describe(TestUtils.formatTestSuiteTitle('UserProfile'), () => {
     const result: UserProfileResponse | undefined = await api.userProfile.getUserProfile('1')
     expect(result).toBeDefined()
     expect(result!.dsProfileDetails.length).toEqual(1)
+
+    done()
+  })
+
+  test('User profile header query should return result', async (done) => {
+    expect.assertions(3)
+
+    const api = new ApiClient()
+    const result: UserProfileHeaderResponse | undefined = await api.userProfile.getUserProfileHeader('1')
+
+    expect(result).toBeDefined()
+    expect(result!.dsProfileHeaderInfo.length).toEqual(1)
+    expect(result!.dsProfileHeaderInfo[0].NICK).toBeDefined()
 
     done()
   })
