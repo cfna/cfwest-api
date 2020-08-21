@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ApiClientOptions | @cfwest/api-client</title>
+	<title>UserProfileRibbonGroupListEntry | @cfwest/api-client</title>
 	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,28 +56,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="apiclientoptions.html">ApiClientOptions</a>
+					<a href="userprofileribbongrouplistentry.html">UserProfileRibbonGroupListEntry</a>
 				</li>
 			</ul>
-			<h1>Interface ApiClientOptions</h1>
+			<h1>Interface UserProfileRibbonGroupListEntry</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Options to modify <a href="../classes/apiclient.html">ApiClient</a>s behavior.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ApiClientOptions</span>
+						<span class="target">UserProfileRibbonGroupListEntry</span>
 					</li>
 				</ul>
 			</section>
@@ -88,7 +81,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="apiclientoptions.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileribbongrouplistentry.html#reg_date" class="tsd-kind-icon">REG_<wbr>DATE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileribbongrouplistentry.html#ribbongroupinternaldesc" class="tsd-kind-icon">ribbon<wbr>Group<wbr>Internal<wbr>Desc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileribbongrouplistentry.html#ribbongroupname" class="tsd-kind-icon">ribbon<wbr>Group<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileribbongrouplistentry.html#ribbongroupsort" class="tsd-kind-icon">ribbon<wbr>Group<wbr>Sort</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileribbongrouplistentry.html#ribbontype" class="tsd-kind-icon">ribbon<wbr>Type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,19 +94,54 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="httpclient" class="tsd-anchor"></a>
-					<h3>http<wbr>Client</h3>
-					<div class="tsd-signature tsd-kind-icon">http<wbr>Client<span class="tsd-signature-symbol">:</span> <a href="httpclient.html" class="tsd-signature-type">HttpClient</a></div>
+					<a name="reg_date" class="tsd-anchor"></a>
+					<h3>REG_<wbr>DATE</h3>
+					<div class="tsd-signature tsd-kind-icon">REG_<wbr>DATE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/api-client.ts#L96">api-client.ts:96</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L145">internal/rest-models/userprofile.ts:145</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Specify the <a href="httpclient.html">HttpClient</a> implementation to use.</p>
-						</div>
-					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ribbongroupinternaldesc" class="tsd-anchor"></a>
+					<h3>ribbon<wbr>Group<wbr>Internal<wbr>Desc</h3>
+					<div class="tsd-signature tsd-kind-icon">ribbon<wbr>Group<wbr>Internal<wbr>Desc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L146">internal/rest-models/userprofile.ts:146</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ribbongroupname" class="tsd-anchor"></a>
+					<h3>ribbon<wbr>Group<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">ribbon<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L147">internal/rest-models/userprofile.ts:147</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ribbongroupsort" class="tsd-anchor"></a>
+					<h3>ribbon<wbr>Group<wbr>Sort</h3>
+					<div class="tsd-signature tsd-kind-icon">ribbon<wbr>Group<wbr>Sort<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L148">internal/rest-models/userprofile.ts:148</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ribbontype" class="tsd-anchor"></a>
+					<h3>ribbon<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">ribbon<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L149">internal/rest-models/userprofile.ts:149</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -126,10 +158,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="apiclientoptions.html" class="tsd-kind-icon">Api<wbr>Client<wbr>Options</a>
+						<a href="userprofileribbongrouplistentry.html" class="tsd-kind-icon">User<wbr>Profile<wbr>Ribbon<wbr>Group<wbr>List<wbr>Entry</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="apiclientoptions.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a>
+								<a href="userprofileribbongrouplistentry.html#reg_date" class="tsd-kind-icon">REG_<wbr>DATE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileribbongrouplistentry.html#ribbongroupinternaldesc" class="tsd-kind-icon">ribbon<wbr>Group<wbr>Internal<wbr>Desc</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileribbongrouplistentry.html#ribbongroupname" class="tsd-kind-icon">ribbon<wbr>Group<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileribbongrouplistentry.html#ribbongroupsort" class="tsd-kind-icon">ribbon<wbr>Group<wbr>Sort</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileribbongrouplistentry.html#ribbontype" class="tsd-kind-icon">ribbon<wbr>Type</a>
 							</li>
 						</ul>
 					</li>

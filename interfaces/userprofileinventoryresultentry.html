@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UserInfo | @cfwest/api-client</title>
+	<title>UserProfileInventoryResultEntry | @cfwest/api-client</title>
 	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="userinfo.html">UserInfo</a>
+					<a href="userprofileinventoryresultentry.html">UserProfileInventoryResultEntry</a>
 				</li>
 			</ul>
-			<h1>Interface UserInfo</h1>
+			<h1>Interface UserProfileInventoryResultEntry</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UserInfo</span>
+						<span class="target">UserProfileInventoryResultEntry</span>
 					</li>
 				</ul>
 			</section>
@@ -81,8 +81,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userinfo.html#nick" class="tsd-kind-icon">NICK</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userinfo.html#usn" class="tsd-kind-icon">USN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileinventoryresultentry.html#cnt" class="tsd-kind-icon">CNT</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileinventoryresultentry.html#display_name" class="tsd-kind-icon">DISPLAY_<wbr>NAME</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileinventoryresultentry.html#item_category" class="tsd-kind-icon">ITEM_<wbr>CATEGORY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileinventoryresultentry.html#item_code" class="tsd-kind-icon">ITEM_<wbr>CODE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileinventoryresultentry.html#item_id" class="tsd-kind-icon">ITEM_<wbr>ID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofileinventoryresultentry.html#rowpos" class="tsd-kind-icon">ROWPOS</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,22 +95,62 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="nick" class="tsd-anchor"></a>
-					<h3>NICK</h3>
-					<div class="tsd-signature tsd-kind-icon">NICK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="cnt" class="tsd-anchor"></a>
+					<h3>CNT</h3>
+					<div class="tsd-signature tsd-kind-icon">CNT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/ribbon.ts#L27">internal/rest-models/ribbon.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L105">internal/rest-models/userprofile.ts:105</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="usn" class="tsd-anchor"></a>
-					<h3>USN</h3>
-					<div class="tsd-signature tsd-kind-icon">USN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="display_name" class="tsd-anchor"></a>
+					<h3>DISPLAY_<wbr>NAME</h3>
+					<div class="tsd-signature tsd-kind-icon">DISPLAY_<wbr>NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/ribbon.ts#L26">internal/rest-models/ribbon.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L106">internal/rest-models/userprofile.ts:106</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="item_category" class="tsd-anchor"></a>
+					<h3>ITEM_<wbr>CATEGORY</h3>
+					<div class="tsd-signature tsd-kind-icon">ITEM_<wbr>CATEGORY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L107">internal/rest-models/userprofile.ts:107</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="item_code" class="tsd-anchor"></a>
+					<h3>ITEM_<wbr>CODE</h3>
+					<div class="tsd-signature tsd-kind-icon">ITEM_<wbr>CODE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L108">internal/rest-models/userprofile.ts:108</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="item_id" class="tsd-anchor"></a>
+					<h3>ITEM_<wbr>ID</h3>
+					<div class="tsd-signature tsd-kind-icon">ITEM_<wbr>ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L109">internal/rest-models/userprofile.ts:109</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="rowpos" class="tsd-anchor"></a>
+					<h3>ROWPOS</h3>
+					<div class="tsd-signature tsd-kind-icon">ROWPOS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L110">internal/rest-models/userprofile.ts:110</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -125,13 +169,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="userinfo.html" class="tsd-kind-icon">User<wbr>Info</a>
+						<a href="userprofileinventoryresultentry.html" class="tsd-kind-icon">User<wbr>Profile<wbr>Inventory<wbr>Result<wbr>Entry</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="userinfo.html#nick" class="tsd-kind-icon">NICK</a>
+								<a href="userprofileinventoryresultentry.html#cnt" class="tsd-kind-icon">CNT</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="userinfo.html#usn" class="tsd-kind-icon">USN</a>
+								<a href="userprofileinventoryresultentry.html#display_name" class="tsd-kind-icon">DISPLAY_<wbr>NAME</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileinventoryresultentry.html#item_category" class="tsd-kind-icon">ITEM_<wbr>CATEGORY</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileinventoryresultentry.html#item_code" class="tsd-kind-icon">ITEM_<wbr>CODE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileinventoryresultentry.html#item_id" class="tsd-kind-icon">ITEM_<wbr>ID</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofileinventoryresultentry.html#rowpos" class="tsd-kind-icon">ROWPOS</a>
 							</li>
 						</ul>
 					</li>

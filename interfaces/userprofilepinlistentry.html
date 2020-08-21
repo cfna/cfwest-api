@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UserCollectionsResponse | @cfwest/api-client</title>
+	<title>UserProfilePinListEntry | @cfwest/api-client</title>
 	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="usercollectionsresponse.html">UserCollectionsResponse</a>
+					<a href="userprofilepinlistentry.html">UserProfilePinListEntry</a>
 				</li>
 			</ul>
-			<h1>Interface UserCollectionsResponse</h1>
+			<h1>Interface UserProfilePinListEntry</h1>
 		</div>
 	</div>
 </header>
@@ -70,12 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="countableresponse.html" class="tsd-signature-type">CountableResponse</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">UserCollectionsResponse</span>
-							</li>
-						</ul>
+						<span class="target">UserProfilePinListEntry</span>
 					</li>
 				</ul>
 			</section>
@@ -86,13 +81,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="usercollectionsresponse.html#apimessage" class="tsd-kind-icon">APImessage</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="usercollectionsresponse.html#apiresult" class="tsd-kind-icon">APIresult</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usercollectionsresponse.html#completed_collections" class="tsd-kind-icon">Completed_<wbr><wbr>Collections</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="usercollectionsresponse.html#count" class="tsd-kind-icon">Count</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="usercollectionsresponse.html#total_count" class="tsd-kind-icon">Total_<wbr><wbr>Count</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usercollectionsresponse.html#weapons" class="tsd-kind-icon">Weapons</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usercollectionsresponse.html#nick" class="tsd-kind-icon">nick</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#pin_display_name" class="tsd-kind-icon">PIN_<wbr>DISPLAY_<wbr>NAME</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#pin_id" class="tsd-kind-icon">PIN_<wbr>ID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#pin_order" class="tsd-kind-icon">PIN_<wbr>ORDER</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#hasit" class="tsd-kind-icon">has<wbr>It</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#regdate" class="tsd-kind-icon">reg<wbr>Date</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#ribbonid" class="tsd-kind-icon">ribbonID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="userprofilepinlistentry.html#ribbonname" class="tsd-kind-icon">ribbon<wbr>Name</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,77 +95,73 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="apimessage" class="tsd-anchor"></a>
-					<h3>APImessage</h3>
-					<div class="tsd-signature tsd-kind-icon">APImessage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pin_display_name" class="tsd-anchor"></a>
+					<h3>PIN_<wbr>DISPLAY_<wbr>NAME</h3>
+					<div class="tsd-signature tsd-kind-icon">PIN_<wbr>DISPLAY_<wbr>NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseresponse.html">BaseResponse</a>.<a href="baseresponse.html#apimessage">APImessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/base.ts#L3">internal/rest-models/base.ts:3</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="apiresult" class="tsd-anchor"></a>
-					<h3>APIresult</h3>
-					<div class="tsd-signature tsd-kind-icon">APIresult<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseresponse.html">BaseResponse</a>.<a href="baseresponse.html#apiresult">APIresult</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/base.ts#L2">internal/rest-models/base.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L95">internal/rest-models/userprofile.ts:95</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="completed_collections" class="tsd-anchor"></a>
-					<h3>Completed_<wbr><wbr>Collections</h3>
-					<div class="tsd-signature tsd-kind-icon">Completed_<wbr><wbr>Collections<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="pin_id" class="tsd-anchor"></a>
+					<h3>PIN_<wbr>ID</h3>
+					<div class="tsd-signature tsd-kind-icon">PIN_<wbr>ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userweapons.ts#L66">internal/rest-models/userweapons.ts:66</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="count" class="tsd-anchor"></a>
-					<h3>Count</h3>
-					<div class="tsd-signature tsd-kind-icon">Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="countableresponse.html">CountableResponse</a>.<a href="countableresponse.html#count">Count</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/base.ts#L8">internal/rest-models/base.ts:8</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="total_count" class="tsd-anchor"></a>
-					<h3>Total_<wbr><wbr>Count</h3>
-					<div class="tsd-signature tsd-kind-icon">Total_<wbr><wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="countableresponse.html">CountableResponse</a>.<a href="countableresponse.html#total_count">Total_Count</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/base.ts#L7">internal/rest-models/base.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L96">internal/rest-models/userprofile.ts:96</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="weapons" class="tsd-anchor"></a>
-					<h3>Weapons</h3>
-					<div class="tsd-signature tsd-kind-icon">Weapons<span class="tsd-signature-symbol">:</span> <a href="collections.info.html" class="tsd-signature-type">Info</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="pin_order" class="tsd-anchor"></a>
+					<h3>PIN_<wbr>ORDER</h3>
+					<div class="tsd-signature tsd-kind-icon">PIN_<wbr>ORDER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userweapons.ts#L68">internal/rest-models/userweapons.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L97">internal/rest-models/userprofile.ts:97</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="nick" class="tsd-anchor"></a>
-					<h3>nick</h3>
-					<div class="tsd-signature tsd-kind-icon">nick<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="hasit" class="tsd-anchor"></a>
+					<h3>has<wbr>It</h3>
+					<div class="tsd-signature tsd-kind-icon">has<wbr>It<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userweapons.ts#L69">internal/rest-models/userweapons.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L98">internal/rest-models/userprofile.ts:98</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="regdate" class="tsd-anchor"></a>
+					<h3>reg<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">reg<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L99">internal/rest-models/userprofile.ts:99</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ribbonid" class="tsd-anchor"></a>
+					<h3>ribbonID</h3>
+					<div class="tsd-signature tsd-kind-icon">ribbonID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L100">internal/rest-models/userprofile.ts:100</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ribbonname" class="tsd-anchor"></a>
+					<h3>ribbon<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">ribbon<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/rest-models/userprofile.ts#L101">internal/rest-models/userprofile.ts:101</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -189,28 +180,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="usercollectionsresponse.html" class="tsd-kind-icon">User<wbr>Collections<wbr>Response</a>
+						<a href="userprofilepinlistentry.html" class="tsd-kind-icon">User<wbr>Profile<wbr>Pin<wbr>List<wbr>Entry</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="usercollectionsresponse.html#apimessage" class="tsd-kind-icon">APImessage</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="usercollectionsresponse.html#apiresult" class="tsd-kind-icon">APIresult</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofilepinlistentry.html#pin_display_name" class="tsd-kind-icon">PIN_<wbr>DISPLAY_<wbr>NAME</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="usercollectionsresponse.html#completed_collections" class="tsd-kind-icon">Completed_<wbr><wbr>Collections</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="usercollectionsresponse.html#count" class="tsd-kind-icon">Count</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="usercollectionsresponse.html#total_count" class="tsd-kind-icon">Total_<wbr><wbr>Count</a>
+								<a href="userprofilepinlistentry.html#pin_id" class="tsd-kind-icon">PIN_<wbr>ID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="usercollectionsresponse.html#weapons" class="tsd-kind-icon">Weapons</a>
+								<a href="userprofilepinlistentry.html#pin_order" class="tsd-kind-icon">PIN_<wbr>ORDER</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="usercollectionsresponse.html#nick" class="tsd-kind-icon">nick</a>
+								<a href="userprofilepinlistentry.html#hasit" class="tsd-kind-icon">has<wbr>It</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofilepinlistentry.html#regdate" class="tsd-kind-icon">reg<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofilepinlistentry.html#ribbonid" class="tsd-kind-icon">ribbonID</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="userprofilepinlistentry.html#ribbonname" class="tsd-kind-icon">ribbon<wbr>Name</a>
 							</li>
 						</ul>
 					</li>

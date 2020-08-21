@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>WebShopApiModule | @cfwest/api-client</title>
+	<title>UserProfileApiModule | @cfwest/api-client</title>
 	<meta name="description" content="Documentation for @cfwest/api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="webshopapimodule.html">WebShopApiModule</a>
+					<a href="userprofileapimodule.html">UserProfileApiModule</a>
 				</li>
 			</ul>
-			<h1>Class WebShopApiModule</h1>
+			<h1>Class UserProfileApiModule</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 						<a href="baseapimodule.html" class="tsd-signature-type">BaseApiModule</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">WebShopApiModule</span>
+								<span class="target">UserProfileApiModule</span>
 							</li>
 						</ul>
 					</li>
@@ -86,19 +86,20 @@
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="webshopapimodule.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="userprofileapimodule.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="webshopapimodule.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="userprofileapimodule.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="webshopapimodule.html#getwebshopitems" class="tsd-kind-icon">get<wbr>Web<wbr>Shop<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="userprofileapimodule.html#getuserprofile" class="tsd-kind-icon">get<wbr>User<wbr>Profile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="userprofileapimodule.html#getuserprofileheader" class="tsd-kind-icon">get<wbr>User<wbr>Profile<wbr>Header</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,7 +111,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Web<wbr>Shop<wbr>Api<wbr>Module<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/apimoduleoptions.html" class="tsd-signature-type">ApiModuleOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="webshopapimodule.html" class="tsd-signature-type">WebShopApiModule</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>User<wbr>Profile<wbr>Api<wbr>Module<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/apimoduleoptions.html" class="tsd-signature-type">ApiModuleOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="userprofileapimodule.html" class="tsd-signature-type">UserProfileApiModule</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -126,7 +127,7 @@
 									<h5>options: <a href="../interfaces/apimoduleoptions.html" class="tsd-signature-type">ApiModuleOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="webshopapimodule.html" class="tsd-signature-type">WebShopApiModule</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="userprofileapimodule.html" class="tsd-signature-type">UserProfileApiModule</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -148,31 +149,48 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getwebshopitems" class="tsd-anchor"></a>
-					<h3>get<wbr>Web<wbr>Shop<wbr>Items</h3>
+					<a name="getuserprofile" class="tsd-anchor"></a>
+					<h3>get<wbr>User<wbr>Profile</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Web<wbr>Shop<wbr>Items<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, filterType<span class="tsd-signature-symbol">?: </span><a href="../enums/webshopfilter.html" class="tsd-signature-type">WebshopFilter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/webshopitem.html" class="tsd-signature-type">WebShopItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Profile<span class="tsd-signature-symbol">(</span>playerUsn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userprofileresponse.html" class="tsd-signature-type">UserProfileResponse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/api-modules/webshop-module.ts#L5">internal/api-modules/webshop-module.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/api-modules/userprofile-module.ts#L9">internal/api-modules/userprofile-module.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> start: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> end: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 100</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> filterType: <a href="../enums/webshopfilter.html" class="tsd-signature-type">WebshopFilter</a><span class="tsd-signature-symbol"> = WebshopFilter.None</span></h5>
+									<h5>playerUsn: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/webshopitem.html" class="tsd-signature-type">WebShopItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userprofileresponse.html" class="tsd-signature-type">UserProfileResponse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getuserprofileheader" class="tsd-anchor"></a>
+					<h3>get<wbr>User<wbr>Profile<wbr>Header</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Profile<wbr>Header<span class="tsd-signature-symbol">(</span>playerUsn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userprofileheaderresponse.html" class="tsd-signature-type">UserProfileHeaderResponse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cfna/cfwest-api/blob/6ab4bee/src/internal/api-modules/userprofile-module.ts#L19">internal/api-modules/userprofile-module.ts:19</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>playerUsn: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userprofileheaderresponse.html" class="tsd-signature-type">UserProfileHeaderResponse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -191,16 +209,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="webshopapimodule.html" class="tsd-kind-icon">Web<wbr>Shop<wbr>Api<wbr>Module</a>
+						<a href="userprofileapimodule.html" class="tsd-kind-icon">User<wbr>Profile<wbr>Api<wbr>Module</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-								<a href="webshopapimodule.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="userprofileapimodule.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="webshopapimodule.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a>
+								<a href="userprofileapimodule.html#httpclient" class="tsd-kind-icon">http<wbr>Client</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="webshopapimodule.html#getwebshopitems" class="tsd-kind-icon">get<wbr>Web<wbr>Shop<wbr>Items</a>
+								<a href="userprofileapimodule.html#getuserprofile" class="tsd-kind-icon">get<wbr>User<wbr>Profile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="userprofileapimodule.html#getuserprofileheader" class="tsd-kind-icon">get<wbr>User<wbr>Profile<wbr>Header</a>
 							</li>
 						</ul>
 					</li>
