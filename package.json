@@ -41,7 +41,7 @@
     "lint": "tslint --project tsconfig.json --config tslint.json --fix",
     "pretest": "yarn build",
     "test": "jest",
-    "format": "prettier --write \"**/*.ts\"",
+    "format": "prettier --parser typescript --write \"**/*.ts\"",
     "prerelease": "yarn build",
     "prerelease:patch": "yarn build",
     "prerelease:minor": "yarn build",

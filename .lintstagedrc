@@ -1,6 +1,6 @@
 {
   "src/**/*.ts": [
     "yarn lint",
-    "prettier --parser typescript --write"
+    "yarn format"
   ]
 }
