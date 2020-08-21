@@ -1,5 +1,5 @@
-import { Achievement, UserAchievementResponse, UserAchievement } from '../rest-models';
-import { BaseApiModule } from './base-module';
+import { Achievement, UserAchievementResponse, UserAchievement } from '../rest-models'
+import { BaseApiModule } from './base-module'
 
 /**
  * ApiModule to handle everything related _'Achievements'_ related implementation.
@@ -15,9 +15,9 @@ export class AchievementsApiModule extends BaseApiModule {
     return this.httpClient.get<Achievement[]>(
       'https://z8games.akamaized.net/cfna/templates/assets/js/user_achievement_data.json',
       {
-        baseURL: undefined,
-      },
-    );
+        baseURL: undefined
+      }
+    )
   }
 
   /**
@@ -33,9 +33,9 @@ export class AchievementsApiModule extends BaseApiModule {
   public async getUserAchievements(playerUSN: string): Promise<UserAchievement[] | undefined> {
     const response = await this.httpClient.get<UserAchievementResponse>('userachievements.json', {
       params: {
-        usn: playerUSN,
-      },
-    });
-    return response?.Achievements;
+        usn: playerUSN
+      }
+    })
+    return response?.Achievements
   }
 }

@@ -1,8 +1,8 @@
-import { WeaponCategory } from '../rest-models';
+import { WeaponCategory } from '../rest-models'
 
 export interface WeaponCategoryMapper {
-  mapWeaponCategoryNameToIndex(category: WeaponCategory): number;
-  mapWeaponCategoryIndexToName(categoryIndex: number): WeaponCategory | undefined;
+  mapWeaponCategoryNameToIndex(category: WeaponCategory): number
+  mapWeaponCategoryIndexToName(categoryIndex: number): WeaponCategory | undefined
 }
 
 export class WeaponCategoryMapperImpl implements WeaponCategoryMapper {
@@ -18,15 +18,15 @@ export class WeaponCategoryMapperImpl implements WeaponCategoryMapper {
   ]);
 
   mapWeaponCategoryNameToIndex(category: WeaponCategory): number {
-    return this.mappings.get(category) || -1;
+    return this.mappings.get(category) || -1
   }
 
   mapWeaponCategoryIndexToName(categoryIndex: number): WeaponCategory | undefined {
     this.mappings.forEach((index, categoryName) => {
       if (index === categoryIndex) {
-        return categoryName;
+        return categoryName
       }
-    });
-    return undefined;
+    })
+    return undefined
   }
 }

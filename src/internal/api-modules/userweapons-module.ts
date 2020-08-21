@@ -1,4 +1,4 @@
-import { BaseApiModule, ApiModuleOptions } from './base-module';
+import { BaseApiModule, ApiModuleOptions } from './base-module'
 import {
   WeaponsFilterType,
   WeaponCategory,
@@ -8,15 +8,15 @@ import {
   Collections,
   CollectionWithUserInfo,
   UserCollectionsResponse
-} from '../rest-models';
-import { WeaponCategoryMapper } from '../mapping';
+} from '../rest-models'
+import { WeaponCategoryMapper } from '../mapping'
 
 export class UserWeaponsApiModule extends BaseApiModule {
-  private readonly weaponCategoryMapper: WeaponCategoryMapper;
+  private readonly weaponCategoryMapper: WeaponCategoryMapper
 
   constructor(options: ApiModuleOptions) {
-    super(options);
-    this.weaponCategoryMapper = options.weaponCategoryMapper;
+    super(options)
+    this.weaponCategoryMapper = options.weaponCategoryMapper
   }
 
   public async getUserWeapons(
@@ -26,7 +26,7 @@ export class UserWeaponsApiModule extends BaseApiModule {
     start: number = 1,
     end: number = 500
   ): Promise<UserWeapon[] | undefined> {
-    const categoryIndex = this.weaponCategoryMapper.mapWeaponCategoryNameToIndex(category);
+    const categoryIndex = this.weaponCategoryMapper.mapWeaponCategoryNameToIndex(category)
     const response = await this.httpClient.get<UserWeaponsResponse>('userweapons.json', {
       params: {
         startrow: start,
@@ -35,10 +35,10 @@ export class UserWeaponsApiModule extends BaseApiModule {
         item_category3: categoryIndex,
         term: filter
       }
-    });
+    })
 
     if (response && response.Weapons) {
-      return response.Weapons;
+      return response.Weapons
     }
   }
 
@@ -48,7 +48,7 @@ export class UserWeaponsApiModule extends BaseApiModule {
     start: number = 1,
     end: number = 500
   ): Promise<CollectionWithUserInfo | undefined> {
-    const responseObject: CollectionWithUserInfo = [];
+    const responseObject: CollectionWithUserInfo = []
     const response = await this.httpClient.get<CollectionCollectorResponse>('userweapons.json', {
       params: {
         startrow: start,
@@ -58,12 +58,12 @@ export class UserWeaponsApiModule extends BaseApiModule {
         collection_ID: collectionID,
         term: 'collectionRanking'
       }
-    });
+    })
 
     if (response && response.Collection_Info && response.User_Info) {
-      responseObject[0] = response.Collection_Info;
-      responseObject[1] = response.User_Info;
-      return responseObject;
+      responseObject[0] = response.Collection_Info
+      responseObject[1] = response.User_Info
+      return responseObject
     }
   }
 
@@ -76,10 +76,10 @@ export class UserWeaponsApiModule extends BaseApiModule {
         term: 'collection',
         usn: playerUSN
       }
-    });
+    })
 
     if (response && response.Weapons) {
-      return response.Weapons;
+      return response.Weapons
     }
   }
 }

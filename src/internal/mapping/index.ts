@@ -1,1 +1,1 @@
-export * from './weapon-category-mapping';
+export * from './weapon-category-mapping'

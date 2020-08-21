@@ -1,60 +1,60 @@
-import { CountableResponse } from './base';
+import { CountableResponse } from './base'
 
 export interface ClanRankingResponse extends CountableResponse {
-  Ranking: ClanRanking;
+  Ranking: ClanRanking
 }
 
 export interface PlayerRankingResponse extends CountableResponse {
-  Ranking: PlayerRanking;
+  Ranking: PlayerRanking
 }
 
 export interface ClanRanking {
-  RankList: ClanInfo[];
+  RankList: ClanInfo[]
 }
 
 export interface PlayerRanking {
-  RankList: PlayerInfo[];
+  RankList: PlayerInfo[]
 }
 
-export type RankingResponseType = 'clan' | 'player';
+export type RankingResponseType = 'clan' | 'player'
 
 export interface PlayerInfo {
-  id: number;
-  usn: number;
-  ign: string;
-  xp_point: number;
-  total_xp: number;
-  game_point: number;
-  rank: number;
-  regweek: string;
-  startdate: number;
-  enddate: number;
-  name: string;
-  rank_title: string;
-  position: number;
-  isMarshal: boolean;
-  kills: null;
-  deaths: null;
-  wins: null;
-  games: number;
-  kd: number;
-  vit: string;
+  id: number
+  usn: number
+  ign: string
+  xp_point: number
+  total_xp: number
+  game_point: number
+  rank: number
+  regweek: string
+  startdate: number
+  enddate: number
+  name: string
+  rank_title: string
+  position: number
+  isMarshal: boolean
+  kills: null
+  deaths: null
+  wins: null
+  games: number
+  kd: number
+  vit: string
 }
 
 export interface ClanInfo {
-  id: number;
-  clankey: number;
-  clanname: string;
-  marklayer01: number;
-  marklayer02: number;
-  marklayer03: number;
-  marklayer04: number;
-  xp_point: number;
-  rank: number;
-  regweek: string;
-  startdate: number;
-  enddate: number;
-  pattern: string;
+  id: number
+  clankey: number
+  clanname: string
+  marklayer01: number
+  marklayer02: number
+  marklayer03: number
+  marklayer04: number
+  xp_point: number
+  rank: number
+  regweek: string
+  startdate: number
+  enddate: number
+  pattern: string
 }
 
 export const enum PeriodType {

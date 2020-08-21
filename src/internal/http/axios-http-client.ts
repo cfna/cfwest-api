@@ -1,8 +1,9 @@
-import axios, { AxiosInstance } from 'axios';
-import { HttpClient } from './http-client';
+import axios, { AxiosInstance } from 'axios'
+import { Agent } from 'https'
+import { HttpClient } from './http-client'
 
 export class AxiosHttpClient implements HttpClient {
-  private readonly httpClient: AxiosInstance;
+  private readonly httpClient: AxiosInstance
 
   constructor() {
     this.httpClient = axios.create({
@@ -14,16 +15,19 @@ export class AxiosHttpClient implements HttpClient {
         Host: 'crossfire.z8games.com',
         Referer: 'http://crossfire.z8games.com/playerranking.html',
         'User-Agent':
-          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36',
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36'
       },
-    });
+      httpsAgent: new Agent({
+        rejectUnauthorized: false
+      })
+    })
   }
 
   async get<T>(url: string, options?: any): Promise<T | undefined> {
-    const response = await this.httpClient.get<T>(url, options);
+    const response = await this.httpClient.get<T>(url, options)
     if (response && response.data) {
-      return response.data;
+      return response.data
     }
-    return undefined;
+    return undefined
   }
 }
