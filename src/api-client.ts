@@ -10,7 +10,7 @@ import {
 import { AxiosHttpClient, HttpClient } from './internal/http';
 import { WeaponCategoryMapperImpl } from './internal/mapping';
 import { ApiModuleOptions } from './internal/api-modules/base-module';
-import merge from 'lodash.merge';
+import _ from 'lodash';
 
 /** @hidden */
 const defaultOptions: ApiClientOptions = {
@@ -78,11 +78,11 @@ export class ApiClient {
   }
 
   private mergeConstructorOptions(options?: ApiClientOptions): ApiClientOptions {
-    return merge({}, defaultOptions, options);
+    return _.merge({}, defaultOptions, options);
   }
 
   private createApiModuleOptions(apiClientOptions: ApiClientOptions): ApiModuleOptions {
-    return merge({}, defaultApiModuleOptions, apiClientOptions);
+    return _.merge({}, defaultApiModuleOptions, apiClientOptions);
   }
 }
 

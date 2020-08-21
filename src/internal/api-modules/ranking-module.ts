@@ -1,6 +1,6 @@
 import { BaseApiModule } from './base-module';
 import { PlayerInfo, PeriodType, RankType, ClanInfo, ClanRankingResponse, PlayerRankingResponse } from '../rest-models';
-import merge from 'lodash.merge';
+import _ from 'lodash';
 
 class DefaulutRankingOptions implements RankingOptions {
   searchName: string = '';
@@ -20,7 +20,7 @@ export interface RankingOptions {
 
 export class RankingApiModule extends BaseApiModule {
   private mergeRequestParams(options: RankingOptions): RankingOptions {
-    return merge({}, new DefaulutRankingOptions(), options);
+    return _.merge({}, new DefaulutRankingOptions(), options);
   }
 
   private async playerRankingRequest(requestOptions: RankingOptions): Promise<PlayerInfo[] | undefined> {
