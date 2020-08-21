@@ -6,8 +6,8 @@ export class UpdatesApiModule extends BaseApiModule {
     const response = await this.httpClient.get<UpdatesResponse>('updates.json', {
       params: {
         startrow: start,
-        endrow: end,
-      },
+        endrow: end
+      }
     });
 
     if (response && response.WebPages) {

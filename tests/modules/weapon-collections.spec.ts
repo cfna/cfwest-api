@@ -8,7 +8,7 @@ jest.setTimeout(90000);
 const logger = TestUtils.getLogger();
 
 describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
-  test('User collections query should return result', async done => {
+  test('User collections query should return result', async (done) => {
     expect.assertions(2);
     const api = new ApiClient();
     const result = await api.userWeapons.getUserCollections(TestUtils.DEFAULT_PLAYER_USN);
@@ -21,7 +21,7 @@ describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
     done();
   });
 
-  test('It should find the matching Collection ID for the given nanme', async done => {
+  test('It should find the matching Collection ID for the given nanme', async (done) => {
     expect.assertions(8);
     // const inputs = [ 'Hexagon', 'Leopard', 'Vulcan 9th'];
     const inputNames: string[] = ((await TestUtils.loadWeaponCollectionData('names')) as unknown) as string[];

@@ -5,8 +5,8 @@ export class RibbonsApiModule extends BaseApiModule {
   private fetchUserRibbonInfo(playerUSN: string): Promise<UserRibbonResponse | undefined> {
     return this.httpClient.get<UserRibbonResponse>('userribbons.json', {
       params: {
-        usn: playerUSN,
-      },
+        usn: playerUSN
+      }
     });
   }
 

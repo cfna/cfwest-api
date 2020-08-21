@@ -35,12 +35,12 @@ export interface WebShopItem {
 
 export enum Currency {
   Ep = 'EP',
-  Zp = 'ZP',
+  Zp = 'ZP'
 }
 
 export enum WebshopFilter {
   VipExclusive = 'vip+exclusive',
   Event = 'event',
   Regular = 'regular',
-  None = '',
+  None = ''
 }

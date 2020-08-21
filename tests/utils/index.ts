@@ -24,7 +24,7 @@ export class PickConfig {
 const logger = winston.createLogger({
   exitOnError: false,
   transports: [new winston.transports.Console()],
-  format: winston.format.combine(winston.format.colorize({ all: true }), winston.format.simple()),
+  format: winston.format.combine(winston.format.colorize({ all: true }), winston.format.simple())
 });
 
 export function getLogger(): winston.Logger {

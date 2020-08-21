@@ -15,8 +15,8 @@ export class AchievementsApiModule extends BaseApiModule {
     return this.httpClient.get<Achievement[]>(
       'https://z8games.akamaized.net/cfna/templates/assets/js/user_achievement_data.json',
       {
-        baseURL: undefined,
-      },
+        baseURL: undefined
+      }
     );
   }
 
@@ -33,8 +33,8 @@ export class AchievementsApiModule extends BaseApiModule {
   public async getUserAchievements(playerUSN: string): Promise<UserAchievement[] | undefined> {
     const response = await this.httpClient.get<UserAchievementResponse>('userachievements.json', {
       params: {
-        usn: playerUSN,
-      },
+        usn: playerUSN
+      }
     });
     return response?.Achievements;
   }

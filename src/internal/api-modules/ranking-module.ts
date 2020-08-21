@@ -34,8 +34,8 @@ export class RankingApiModule extends BaseApiModule {
         endrow: options.end,
         period: options.periodType.toString(),
         rankType: options.rank.toString(),
-        name: options.searchName,
-      },
+        name: options.searchName
+      }
     });
 
     if (response && response.Ranking && response.Ranking.RankList) {
@@ -57,8 +57,8 @@ export class RankingApiModule extends BaseApiModule {
         endrow: options.end,
         period: options.periodType.toString(),
         rankType: options.rank.toString(),
-        name: options.searchName,
-      },
+        name: options.searchName
+      }
     });
 
     if (response && response.Ranking.RankList) {
@@ -71,7 +71,7 @@ export class RankingApiModule extends BaseApiModule {
   public searchPlayer(name: string, period: PeriodType = PeriodType.AllTime): Promise<PlayerInfo[] | undefined> {
     return this.playerRankingRequest({
       searchName: name,
-      periodType: period,
+      periodType: period
     });
   }
 
@@ -79,7 +79,7 @@ export class RankingApiModule extends BaseApiModule {
     return this.clanRankingRequest({
       searchName: name,
       periodType: period,
-      rank: RankType.Clan,
+      rank: RankType.Clan
     });
   }
 

@@ -1,6 +1,6 @@
 jest.unmock('axios');
 
-import ApiClient from '../../dist'
+import ApiClient from '../../dist';
 import * as TestUtils from '../utils';
 
 jest.setTimeout(90000);
@@ -8,7 +8,7 @@ jest.setTimeout(90000);
 const logger = TestUtils.getLogger();
 
 describe(TestUtils.formatTestSuiteTitle('Ribbons'), () => {
-  test('Ribbon List should not be empty', async done => {
+  test('Ribbon List should not be empty', async (done) => {
     expect.assertions(2);
     const api = new ApiClient();
     const result = await api.ribbons.getRibbonList();
@@ -17,17 +17,17 @@ describe(TestUtils.formatTestSuiteTitle('Ribbons'), () => {
     logger.debug(`Ribbon List results returned: ${result!.length} items.`);
 
     const targets = TestUtils.pickFromArray(result!, {
-      everyItem: 8,
+      everyItem: 8
     });
 
-    targets.map(item => {
+    targets.map((item) => {
       TestUtils.inspectObject(item, {
         onError: (error: Error) => {
           logger.error(error);
         },
         onResult: (res: string) => {
           logger.info(res);
-        },
+        }
       });
     });
 
