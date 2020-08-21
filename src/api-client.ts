@@ -5,7 +5,7 @@ import {
   UpdatesApiModule,
   UserWeaponsApiModule,
   WebShopApiModule,
-  UserProfileModule
+  UserProfileApiModule
 } from './internal/api-modules';
 import { AxiosHttpClient, HttpClient } from './internal/http';
 import { WeaponCategoryMapperImpl } from './internal/mapping';
@@ -59,7 +59,7 @@ export class ApiClient {
   /**
    * Property to access the [[UserProfileModule]]
    */
-  public readonly userProfile: UserProfileModule;
+  public readonly userProfile: UserProfileApiModule;
 
   /**
    * Constructor to initiale an [[ApiClient]] instance.
@@ -74,7 +74,7 @@ export class ApiClient {
     this.updates = new UpdatesApiModule(moduleInitOptions);
     this.userWeapons = new UserWeaponsApiModule(moduleInitOptions);
     this.webshop = new WebShopApiModule(moduleInitOptions);
-    this.userProfile = new UserProfileModule(moduleInitOptions);
+    this.userProfile = new UserProfileApiModule(moduleInitOptions);
   }
 
   private mergeConstructorOptions(options?: ApiClientOptions): ApiClientOptions {
