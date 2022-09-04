@@ -3,6 +3,10 @@
   "include": [
     "src/**/*"
   ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "src"
+  },
   "typedocOptions": {
     "mode": "file",
     "out": "docs"
