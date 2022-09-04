@@ -1,3 +1,4 @@
 export interface LoginConfig {
-    captchaToken: string
+    captchaToken: string,
+    headless: boolean
 }
