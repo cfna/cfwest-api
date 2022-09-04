@@ -1,6 +1,6 @@
 import config from '../../jest.config.json'
 
 export default {
-    ...config,
-    setupFiles: ['dotenv/config']
+  ...config,
+  setupFiles: ['dotenv/config']
 }
