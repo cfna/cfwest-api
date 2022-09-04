@@ -3,5 +3,5 @@ export interface LoginCookie {
     value: string
     domain: string
     path: string
-    expires: string
+    expires: number
 }
