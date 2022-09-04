@@ -1,0 +1,13 @@
+{
+    "name": "@cfwest/login",
+    "description": "Package to handle login",
+    "scripts": {
+        "prebuild": "yarn clean",
+      "build": "tsc",
+      "clean": "rimraf dist",
+      "clean:all": "rimraf dist && rimraf node_modules",
+      "lint": "tslint --project tsconfig.json --config tslint.json --fix",
+      "pretest": "yarn build",
+      "test": "jest"
+    }
+}
