@@ -1,6 +1,8 @@
 {
     "name": "@cfwest/login",
     "description": "Package to handle login",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "scripts": {
         "prebuild": "yarn clean",
         "build": "tsc",
