@@ -1,6 +1,6 @@
 jest.unmock('axios')
 
-import ApiClient, { WeaponCollectionUtils } from '../../dist'
+import ApiClient, { WeaponCollectionUtils } from '../../src'
 import * as TestUtils from '../utils'
 
 jest.setTimeout(90000)
@@ -8,7 +8,7 @@ jest.setTimeout(90000)
 const logger = TestUtils.getLogger()
 
 describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
-  test('User collections query should return result', async (done) => {
+  test('User collections query should return result', async () => {
     expect.assertions(2)
     const api = new ApiClient()
     const result = await api.userWeapons.getUserCollections(TestUtils.DEFAULT_PLAYER_USN)
@@ -18,10 +18,9 @@ describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
     expect(result).toBeDefined()
     expect(result!.length).toBeGreaterThanOrEqual(TestUtils.MINIMUM_WEAPON_COLLECTION_SIZE)
 
-    done()
   })
 
-  test('It should find the matching Collection ID for the given nanme', async (done) => {
+  test('It should find the matching Collection ID for the given nanme', async () => {
     expect.assertions(8)
     // const inputs = [ 'Hexagon', 'Leopard', 'Vulcan 9th'];
     const inputNames: string[] = ((await TestUtils.loadWeaponCollectionData('names')) as unknown) as string[]
@@ -53,6 +52,5 @@ describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
     const checkTarget = WeaponCollectionUtils.isValidCollectionId(targetID)
     expect(checkTarget).toBeTruthy()
 
-    done()
   })
 })

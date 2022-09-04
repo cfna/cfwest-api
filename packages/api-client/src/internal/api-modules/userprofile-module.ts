@@ -3,7 +3,7 @@ import {
   UserProfileResponse,
   UserProfileHeaderResponse,
   UserProfileHeaderInfoEntry
-} from 'internal/rest-models/userprofile';
+} from '../rest-models/userprofile';
 
 export class UserProfileApiModule extends BaseApiModule {
   public async getUserProfile(playerUsn: string): Promise<UserProfileResponse | undefined> {

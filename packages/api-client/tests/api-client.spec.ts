@@ -1,6 +1,6 @@
 jest.unmock('axios');
 
-import { default as ApiClient, WeaponCategory, WeaponCollections, WeaponCollectionUtils } from '../dist';
+import { default as ApiClient, WeaponCategory, WeaponCollections, WeaponCollectionUtils } from '../src';
 import * as TestUtils from './utils';
 
 jest.setTimeout(90000);
