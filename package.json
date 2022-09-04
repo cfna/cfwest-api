@@ -19,7 +19,8 @@
     "clean:all": "rimraf dist && rimraf node_modules",
     "pretest": "yarn build",
     "test": "lerna run test",
-    "docs": "lerna run docs"
+    "docs": "lerna run docs",
+    "format": "lerna run format"
   },
   "dependencies": {},
   "devDependencies": {
