@@ -4,13 +4,11 @@
       "module": "commonjs",
       "moduleResolution": "node",
       "declaration": true,
-      "outDir": "dist",
       "strict": true,
       "allowSyntheticDefaultImports": true,
       "preserveConstEnums": true,
       "esModuleInterop": true,
       "sourceMap": false,
-      "resolveJsonModule": true,
-      "baseUrl": "src"
+      "resolveJsonModule": true
     }
 }
