@@ -10,6 +10,11 @@ on:
       - develop
       - master
 
+env:
+  2CAPTCHA_API_KEY: ${{ secrets.CAPTCHA_API_KEY }}
+  ACC_ID: ${{ secrets.ACC_ID }}
+  ACC_PASS: ${{ secrets.ACC_PASS }}
+
 jobs:
   build:
 
