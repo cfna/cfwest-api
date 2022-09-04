@@ -3,11 +3,17 @@
     "description": "Package to handle login",
     "scripts": {
         "prebuild": "yarn clean",
-      "build": "tsc",
-      "clean": "rimraf dist",
-      "clean:all": "rimraf dist && rimraf node_modules",
-      "lint": "tslint --project tsconfig.json --config tslint.json --fix",
-      "pretest": "yarn build",
-      "test": "jest"
+        "build": "tsc",
+        "clean": "rimraf dist",
+        "clean:all": "rimraf dist && rimraf node_modules",
+        "lint": "tslint --project tsconfig.json --config tslint.json --fix",
+        "test": "jest",
+        "format": "prettier --parser typescript --write \"**/*.ts\""
+    },
+    "dependencies": {
+        "playwright-core": "^1.25.1",
+        "puppeteer": "^17.1.0",
+        "puppeteer-extra": "^3.3.4",
+        "puppeteer-extra-plugin-recaptcha": "^3.6.6"
     }
 }
