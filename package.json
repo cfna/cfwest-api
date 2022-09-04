@@ -22,7 +22,7 @@
     "docs": "lerna run docs",
     "format": "lerna run format",
     "lint": "lerna run lint",
-    "prepare": "npx husky install"
+    "prepare": "husky install"
   },
   "dependencies": {},
   "devDependencies": {
