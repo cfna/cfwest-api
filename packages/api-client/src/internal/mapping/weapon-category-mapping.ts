@@ -15,7 +15,7 @@ export class WeaponCategoryMapperImpl implements WeaponCategoryMapper {
     ['pistol', 6],
     ['melee', 7],
     ['grenade', 8]
-  ]);
+  ])
 
   mapWeaponCategoryNameToIndex(category: WeaponCategory): number {
     return this.mappings.get(category) || -1

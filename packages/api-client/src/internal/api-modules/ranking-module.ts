@@ -3,11 +3,11 @@ import { PlayerInfo, PeriodType, RankType, ClanInfo, ClanRankingResponse, Player
 import _ from 'lodash'
 
 class DefaulutRankingOptions implements RankingOptions {
-  searchName: string = '';
-  start: number = 1;
-  end: number = 100;
-  periodType: PeriodType = PeriodType.AllTime;
-  rank: RankType = RankType.User;
+  searchName: string = ''
+  start: number = 1
+  end: number = 100
+  periodType: PeriodType = PeriodType.AllTime
+  rank: RankType = RankType.User
 }
 
 export interface RankingOptions {

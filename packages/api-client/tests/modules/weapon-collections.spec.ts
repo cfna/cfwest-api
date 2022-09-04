@@ -17,14 +17,13 @@ describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
 
     expect(result).toBeDefined()
     expect(result!.length).toBeGreaterThanOrEqual(TestUtils.MINIMUM_WEAPON_COLLECTION_SIZE)
-
   })
 
   test('It should find the matching Collection ID for the given nanme', async () => {
     expect.assertions(8)
     // const inputs = [ 'Hexagon', 'Leopard', 'Vulcan 9th'];
-    const inputNames: string[] = ((await TestUtils.loadWeaponCollectionData('names')) as unknown) as string[]
-    const inputIds: number[] = ((await TestUtils.loadWeaponCollectionData('ids')) as unknown) as number[]
+    const inputNames: string[] = (await TestUtils.loadWeaponCollectionData('names')) as unknown as string[]
+    const inputIds: number[] = (await TestUtils.loadWeaponCollectionData('ids')) as unknown as number[]
 
     expect(inputNames).toBeDefined()
     expect(inputNames.length).toBeGreaterThanOrEqual(TestUtils.MINIMUM_WEAPON_COLLECTION_SIZE)
@@ -51,6 +50,5 @@ describe(TestUtils.formatTestSuiteTitle('Weapon Collections'), () => {
 
     const checkTarget = WeaponCollectionUtils.isValidCollectionId(targetID)
     expect(checkTarget).toBeTruthy()
-
   })
 })
