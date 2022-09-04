@@ -3,6 +3,7 @@ import { devices } from 'puppeteer'
 import { default as puppeteer } from 'puppeteer-extra'
 import { default as RecaptchaPlugin } from 'puppeteer-extra-plugin-recaptcha'
 import { LoginConfig } from './login.config'
+import { LoginCookieMapper } from './login-cookie.mapper'
 import { LoginCredentials } from './login.credentials'
 
 const Z8GAMES_LOGIN_URL = 'https://www.z8games.com/login.html'
@@ -68,7 +69,7 @@ export class LoginModule {
         await page.close()
         await browser.close()
 
-        return cookies.map(cookie => cookie as unknown as LoginCookie)
+        return LoginCookieMapper.mapToLoginCookies(cookies)
     }
 
 }
