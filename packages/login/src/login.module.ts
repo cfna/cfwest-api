@@ -12,11 +12,17 @@ const LOGIN_BUTTON_ID = '#login-button'
 
 const Pixel5 = devices['Pixel 5']
 
-
+/**
+ * The LoginModule is used to get [LoginCookie]s which can be used for authenticated requests.
+ */
 export class LoginModule {
 
     private readonly config: LoginConfig
 
+    /**
+     * Create a new [LoginModule] instance. Use the `config` options to configure the module.
+     * @param config The [LoginConfig] options to use.
+     */
     constructor(config: LoginConfig) {
         puppeteer.use(RecaptchaPlugin({
             provider: {
@@ -27,7 +33,12 @@ export class LoginModule {
         this.config = config
     }
 
-    async login(credentials: LoginCredentials): Promise<LoginCookie[] | undefined> {
+    /**
+     * Authenticate with an Z8Games Account. Use the returned [LoginCookie] for authenticated requests.
+     * @param credentials - Account credentials
+     * @returns [LoginCookie] Array of login cookies. Returns undefined in case of error/timeout
+     */
+    async authenticate(credentials: LoginCredentials): Promise<LoginCookie[] | undefined> {
         const browser = await puppeteer.launch({ headless: this.config.headless })
         const page = await browser.newPage()
 

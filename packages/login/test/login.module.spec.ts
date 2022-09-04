@@ -14,7 +14,7 @@ describe('LoginModule Test Suite', () => {
     })
 
     // test('Login should work', async () => {
-    //     await loginModule.login({
+    //     await loginModule.authenticate({
     //         id: process.env.ACC_ID || "MISSING_ID",
     //         password: process.env.ACC_PASS || "MISSING_PASS"
     //     })
