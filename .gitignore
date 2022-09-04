@@ -83,3 +83,4 @@ cfwest-*.tar.gz
 docs/
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
 .env
+debug.png
