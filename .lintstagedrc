@@ -1,6 +1,6 @@
 {
   "src/**/*.ts": [
-    "yarn lint",
-    "yarn format"
+    "npm run lint",
+    "npm run format"
   ]
 }
