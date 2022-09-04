@@ -1,7 +1,7 @@
-import { default as puppeteer } from "puppeteer-extra"
-import { default as RecaptchaPlugin } from "puppeteer-extra-plugin-recaptcha"
-import { LoginConfig } from "./login.config"
-import { LoginCredentials } from "./login.credentials"
+import { default as puppeteer } from 'puppeteer-extra'
+import { default as RecaptchaPlugin } from 'puppeteer-extra-plugin-recaptcha'
+import { LoginConfig } from './login.config'
+import { LoginCredentials } from './login.credentials'
 
 const Z8GAMES_LOGIN_URL = 'https://www.z8games.com/login.html'
 const USERNAME_INPUT_FIELD_ID = 'login-page-userid'
