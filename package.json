@@ -17,7 +17,6 @@
     "build": "lerna run build",
     "clean": "lerna run clean",
     "clean:all": "rimraf dist && rimraf node_modules",
-    "pretest": "yarn build",
     "test": "lerna run test",
     "docs": "lerna run docs",
     "format": "lerna run format",
