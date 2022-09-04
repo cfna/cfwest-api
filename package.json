@@ -21,7 +21,8 @@
     "docs": "lerna run docs",
     "format": "lerna run format",
     "lint": "lerna run lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "lerna run publish"
   },
   "devDependencies": {
     "@types/jest": "^28.0.0",
