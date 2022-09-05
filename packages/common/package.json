@@ -13,6 +13,7 @@
         "format": "prettier --parser typescript --write \"**/*.ts\""
     },
     "dependencies": {
-        "axios": "^0.27.2"
+        "axios": "^0.27.2",
+        "lodash.merge": "^4.6.2"
     }
 }
