@@ -9,5 +9,4 @@ export class RankingModule {
     this.playerRanking = new PlayerRankingModule()
     this.clanRanking = new ClanRankingModule()
   }
-
 }
