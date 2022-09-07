@@ -5,3 +5,4 @@ docs
 tsconfig.json
 tslint.json
 src
+jest.config.ts
