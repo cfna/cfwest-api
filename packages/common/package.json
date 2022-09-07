@@ -3,6 +3,7 @@
     "description": "Common package which contains shared code for @cfwest packages",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "version": "0.0.1",
     "scripts": {
         "prebuild": "yarn clean",
         "build": "tsc",
@@ -10,7 +11,8 @@
         "clean:all": "rimraf dist && rimraf node_modules",
         "lint": "tslint --project tsconfig.json --config ../../tslint.json",
         "test": "jest",
-        "format": "prettier --parser typescript --write \"**/*.ts\""
+        "format": "prettier --parser typescript --write \"**/*.ts\"",
+        "publish": "release-it"
     },
     "dependencies": {
         "axios": "^0.27.2",
