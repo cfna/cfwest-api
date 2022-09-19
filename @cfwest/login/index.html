@@ -26,7 +26,7 @@
 </head>
 <body>
 <header>
-    <a href="/" class="logo">[Unofficial] CrossFire West Api Docs</a>
+    <a href="https://cfna.github.io/cfwest-api/" class="logo">[Unofficial] CrossFire West Api Docs</a>
             <a class="button" href="https://github.com/cfna/cfwest-api" target="_blank">GitHub</a>
         <div class="spacer"></div>
     <button onclick="openSearch()"><span class="icon-search"></span> Search: <kbd>Ctrl</kbd>+<kbd>K</kbd></button>
@@ -35,17 +35,17 @@
     <div class="row">
         <aside class="col-sm-12 col-md-4 col-lg-3">
             <nav class="fixed">
-                <a href="/">Project README</a>
+                <a href="https://cfna.github.io/cfwest-api/">Project README</a>
                 <span>Modules</span>
-                                    <a href="/@cfwest/common">
+                                    <a href="https://cfna.github.io/cfwest-api/@cfwest/common">
                         <code>
                             @cfwest/common                        </code>
                     </a>
-                                    <a href="/@cfwest/login">
+                                    <a href="https://cfna.github.io/cfwest-api/@cfwest/login">
                         <code>
                             @cfwest/login                        </code>
                     </a>
-                                    <a href="/@cfwest/ranking">
+                                    <a href="https://cfna.github.io/cfwest-api/@cfwest/ranking">
                         <code>
                             @cfwest/ranking                        </code>
                     </a>
@@ -530,7 +530,7 @@
         return searchIndex.search((q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase(), 5)
     }
 
-    fetch('/search-index.json').then(r => r.json()).then(index => {
+    fetch('https://cfna.github.io/cfwest-api/search-index.json').then(r => r.json()).then(index => {
         searchIndex.add(index)
         const searchPopup = document.createElement('search-popup');
         searchPopup.setAttribute('search', 'search')
