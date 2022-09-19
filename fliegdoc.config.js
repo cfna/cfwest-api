@@ -2,7 +2,7 @@
 const { HTMLTheme } = require('fliegdoc');
 
 module.exports = {
-	
+	baseUrl: 'https://cfna.github.io/cfwest-api/',
 	outDir: './docs',
 	readme: './README.md',
 	modules: [
