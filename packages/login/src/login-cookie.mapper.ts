@@ -3,7 +3,7 @@ import { Protocol } from 'puppeteer'
 
 export class LoginCookieMapper {
   static mapToLoginCookies(cookies: Protocol.Network.Cookie[]): LoginCookie[] {
-    return cookies.map(this.mapToLoginCookie)
+    return cookies.map((cookie) => LoginCookieMapper.mapToLoginCookie(cookie))
   }
 
   private static mapToLoginCookie(cookie: Protocol.Network.Cookie): LoginCookie {
