@@ -1,4 +1,4 @@
-import { LoginCookie } from 'login.cookie'
+import { LoginCookie } from './login.cookie'
 import { Protocol } from 'puppeteer'
 
 export class LoginCookieMapper {

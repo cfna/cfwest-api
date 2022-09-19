@@ -1,4 +1,4 @@
-import { LoginCookie } from 'login.cookie'
+import { LoginCookie } from './login.cookie'
 import { devices } from 'puppeteer'
 import { default as puppeteer } from 'puppeteer-extra'
 import { default as RecaptchaPlugin } from 'puppeteer-extra-plugin-recaptcha'
