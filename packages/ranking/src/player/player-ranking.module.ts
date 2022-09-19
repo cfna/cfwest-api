@@ -1,5 +1,5 @@
 import { HttpClient, mergeObjects } from '@cfwest/common'
-import { PeriodType, RankType } from 'dtos'
+import { PeriodType, RankType } from '../dtos'
 import { PlayerInfo, PlayerRankingResponse } from './dtos'
 
 interface RankingOptions {
