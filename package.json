@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "author": {
-    "name": "PDDStudio"
+    "name": "cfna"
   },
   "homepage": "https://github.com/cfna/cfwest-api",
   "repository": {
@@ -28,10 +28,14 @@
     "@types/jest": "^28.0.0",
     "@types/lodash": "^4.14.184",
     "@types/lodash.merge": "^4.6.7",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
     "fliegdoc": "^0.5.2",
     "husky": "^8.0.1",
     "jest": "^28.0.0",
     "lint-staged": "^13.0.3",
+    "nx": "14.7.6",
     "prettier": "^2.7.1",
     "release-it": "^15.4.1",
     "rimraf": "^3.0.2",
@@ -40,9 +44,7 @@
     "tslint": "^6.1.3",
     "typedoc": "^0.23.13",
     "typescript": "^4.8.2",
-    "winston": "^3.8.1",
-    "nx": "14.7.6",
-    "@nrwl/nx-cloud": "latest"
+    "winston": "^3.8.1"
   },
   "workspaces": [
     "packages/*"

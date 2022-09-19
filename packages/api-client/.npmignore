@@ -6,3 +6,4 @@ tsconfig.json
 tslint.json
 cfwest*.tar.gz
 src
+test

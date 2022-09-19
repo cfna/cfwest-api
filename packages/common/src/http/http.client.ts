@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios'
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 import { Agent } from 'https'
 
 export class HttpClient {
@@ -22,7 +22,7 @@ export class HttpClient {
     })
   }
 
-  async get<T>(url: string, options?: any): Promise<T | undefined> {
+  async get<T>(url: string, options?: AxiosRequestConfig): Promise<T | undefined> {
     const response = await this.httpClient.get<T>(url, options)
     if (response && response.data) {
       return response.data

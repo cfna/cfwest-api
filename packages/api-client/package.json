@@ -37,7 +37,6 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "clean:all": "rimraf dist && rimraf node_modules",
-    "lint": "tslint --project tsconfig.json --config ../../tslint.json",
     "pretest": "yarn build",
     "test": "jest",
     "format": "prettier --parser typescript --write \"**/*.ts\"",
