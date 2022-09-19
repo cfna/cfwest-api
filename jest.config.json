@@ -7,7 +7,8 @@
   },
   "testPathIgnorePatterns": [
     "<rootDir>/node_modules/",
-    "<rootDir>/tests/utils/"
+    "<rootDir>/tests/utils/",
+    "dist/"
   ],
   "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "testEnvironment": "node",

@@ -1,0 +1,59 @@
+{
+  "name": "@cfwest/api-client",
+  "description": "Unofficial CrossFire West ApiClient implementation.",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "PDDStudio"
+  },
+  "homepage": "https://github.com/cfna/cfwest-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfna/cfwest-api.git"
+  },
+  "directories": {
+    "lib": "./dist",
+    "test": "./tests"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "crossfire",
+    "west",
+    "cfwest",
+    "z8games",
+    "cf",
+    "rest"
+  ],
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "clean:all": "rimraf dist && rimraf node_modules",
+    "lint": "tslint --project tsconfig.json --config ../../tslint.json",
+    "pretest": "yarn build",
+    "test": "jest",
+    "format": "prettier --parser typescript --write \"**/*.ts\"",
+    "prerelease": "yarn build",
+    "prerelease:patch": "yarn build",
+    "prerelease:minor": "yarn build",
+    "prerelease:major": "yarn build",
+    "release": "dotenv release-it --",
+    "release:patch": "dotenv release-it --increment=patch",
+    "release:minor": "dotenv release-it --increment=minor",
+    "release:major": "dotenv release-it --increment=major",
+    "predocs": "rimraf docs",
+    "docs": "typedoc"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "lodash": "^4.17.21"
+  }
+}

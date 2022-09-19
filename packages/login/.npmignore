@@ -1,0 +1,8 @@
+.env
+docs
+tsconfig.json
+tslint.json
+src
+test
+*.png
+jest.config.ts

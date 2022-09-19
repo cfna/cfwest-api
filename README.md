@@ -33,4 +33,4 @@ The docs are build via GitHub Actions and always contain the latest documentatio
 
 ## License
 
-(c) 2019 - 2020 - PDDStudio & Contributors - [MIT Licensed](./LICENSE)
+(c) 2019 - 2022 - PDDStudio & Contributors - [MIT Licensed](./LICENSE)

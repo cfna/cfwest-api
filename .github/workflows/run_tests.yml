@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Build Package & Run Tests
+name: Run Tests
 
 on:
   push:
@@ -10,14 +10,19 @@ on:
       - develop
       - master
 
+env:
+  2CAPTCHA_API_KEY: ${{ secrets.CAPTCHA_API_KEY }}
+  ACC_ID: ${{ secrets.ACC_ID }}
+  ACC_PASS: ${{ secrets.ACC_PASS }}
+
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,6 +30,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm i -g yarn
-    - run: yarn
-    - run: yarn test
+    - run: npm ci
+    - run: npm run build
+    - run: npm run test

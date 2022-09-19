@@ -1,0 +1,9 @@
+.editorconfig
+.nvmrc
+.prettierrc
+docs
+tsconfig.json
+tslint.json
+src
+test
+jest.config.ts
