@@ -3,10 +3,13 @@
     "description": "Package to handle login",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publishConfig": {
         "access": "public"
     },
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "prebuild": "npm run clean",
         "build": "tsc",
