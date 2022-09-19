@@ -3,12 +3,15 @@
     "description": "Common package which contains shared code for @cfwest packages",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publishConfig": {
         "access": "public"
     },
+    "files": [
+        "dist"
+    ],
     "scripts": {
-        "prebuild": "yarn clean",
+        "prebuild": "npm run clean",
         "build": "tsc",
         "clean": "rimraf dist",
         "clean:all": "rimraf dist && rimraf node_modules",
@@ -16,7 +19,8 @@
         "test": "jest",
         "format": "prettier --parser typescript --write \"**/*.ts\"",
         "publish": "release-it",
-        "publish:patch": "release-it patch --ci"
+        "publish:patch": "release-it patch --ci",
+        "prepublish:patch": "npm run build"
     },
     "dependencies": {
         "axios": "^0.27.2",
